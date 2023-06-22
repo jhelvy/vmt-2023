@@ -135,7 +135,7 @@ ggsave(here::here('figs', 'fig1.png'), fig1, width = 11, height = 3.5)
 
 # Read in quantile_bev data, quick formatting
 
-quantiles_bev <- read_csv(here::here('data', 'quantiles_bev.csv')) %>% 
+quantiles_bev <- read_parquet(here::here('data', 'quantiles_bev.parquet')) %>% 
     mutate(
         age_years = age_months / 12, 
         powertrain = 'bev', 
@@ -143,8 +143,9 @@ quantiles_bev <- read_csv(here::here('data', 'quantiles_bev.csv')) %>%
         vehicle = paste(powertrain, vehicle_type, sep = "_"), 
         category = 'other'
     ) %>% 
-    filter(between(age_years, AGE_YEARS_MIN, AGE_YEARS_MAX)) # Set in '0-functions.R'
-df_fig1b <- df_fig1a %>%
+    filter(between(age_years, AGE_YEARS_MIN, AGE_YEARS_MAX))
+
+df_fig1b <- df_fig1 %>%
     filter(category == 'conventional' & powertrain == 'bev') %>% 
     mutate(
         tesla = 0, 
@@ -160,7 +161,7 @@ df_fig1b <- df_fig1a %>%
     )) 
 
 # Save plot data for reproduction
-write_csv(df_fig1b, here::here('data', 'fig1b.csv'))
+qsave(df_fig1b, here::here('data', 'df_fig1b.qs'))
 
 fig1b <- df_fig1b %>% 
     ggplot() +  
