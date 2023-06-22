@@ -75,7 +75,7 @@ data <- do.call(rbind, gas_price_list) %>%
 
 # Link padd to state
 
-states <- read_csv(paths$states) %>% 
+states <- read_csv(here::here('data', 'states.csv')) %>% 
     janitor::clean_names()
 
 data <- states %>% 

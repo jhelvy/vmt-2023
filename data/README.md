@@ -69,9 +69,14 @@ Vehicle specifications dataset webscraped from carsheet.io. Webscrape code is av
 
 ---------------------------------------------------
 
-File: dict_final.csv
+File:
 
-Description: A "dictionary" matching the fuel economy, range, motor efficiency, and msrp from a combination of data from fueleconomy.gov and carsheet.io.
+- dict_raw.parquet
+- dict_fe.parquet
+- dict_carsheet.parquet
+- dict_final.parquet
+
+Dictionaries matching the vehicle year, make, model, trim, powertrain, and vehicle types to data from fueleconomy.gov and carsheet.io. Vehicle fuel economies, ranges, motor efficiencies, and utility factors are primarily from fueleconomy.gov, with supplemented data from carsheet.io where missing.
 
 ---------------------------------------------------
 
