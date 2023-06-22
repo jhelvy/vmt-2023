@@ -63,6 +63,12 @@ https://www.fueleconomy.gov/feg/ws/
 
 ---------------------------------------------------
 
+File: carsheet.parquet
+
+Vehicle specifications dataset webscraped from carsheet.io. Webscrape code is available at https://github.com/jhelvy/carsheet and was conducted on January 12, 2023.
+
+---------------------------------------------------
+
 File: dict_final.csv
 
 Description: A "dictionary" matching the fuel economy, range, motor efficiency, and msrp from a combination of data from fueleconomy.gov and carsheet.io.
