@@ -131,6 +131,14 @@ final_fixes <- function(dt) {
         filter(n > 50) %>%
         select(-n)
 
+    # Remove small n cars
+    dt <- dt %>%
+        group_by(powertrain, make, model) %>%
+        mutate(n = n()) %>%
+        filter(n >= 500) %>%
+        select(-n) %>%
+        ungroup()
+
     return(dt)
 }
 
