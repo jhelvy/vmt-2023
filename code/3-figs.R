@@ -249,7 +249,7 @@ levels(effects$powertrain) <- facet_levels
 levels(dt_car$powertrain) <- facet_levels
 
 # Save plot data for reproduction
-qsave(effects, here::here('data', 'fig2-effects.qs'))
+qsave(effects, here::here('data', 'df_fig2_effects.qs'))
 
 fig2 <- dt_car %>%
     ggplot(aes(x = age_years, y = miles)) +
@@ -284,6 +284,7 @@ fig2 <- dt_car %>%
 tictoc::tic()
 ggsave(here::here('figs', 'fig2.png'), fig2, width = 7, height = 6)
 tictoc::toc()
+# 17.579 sec
 
 # Drop objects for space
 
@@ -407,7 +408,7 @@ df_fig4 <- do.call(rbind, result) %>%
     arrange(vehicle)
 
 # Save plot data for reproduction
-write_csv(df_fig4, here::here('data', 'fig4.csv'))
+qsave(df_fig4, here::here('data', 'df_fig4.qs'))
 
 fig4 <- df_fig4 %>% 
     ggplot(aes(x = range, y = gas_price)) +
@@ -455,4 +456,7 @@ fig4 <- df_fig4 %>%
         family = 'Roboto Condensed'
     )
 
-ggsave(here::here('figs', 'fig4.png'), fig4, width = 6.5, height = 5)
+ggsave(
+    here::here('figs', 'fig4.png'), fig4, 
+    width = 6.5, height = 5
+)
