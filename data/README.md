@@ -126,10 +126,10 @@ downloaded from EIA, https://www.eia.gov/electricity/sales_revenue_price/
 
 Files:
 
-- fig1a.csv
-- fig1b.csv
+- fig1a.qs
+- fig1b.qs
 - fig2-effects.qs
-- fig4.csv
+- fig4.qs
 
 Description:
 

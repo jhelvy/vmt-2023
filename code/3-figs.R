@@ -8,7 +8,7 @@ color_tesla <- "#619CFF" # "dodgerblue"
 
 # Read in quantile data, quick formatting
 
-quantiles <- read_csv(here::here('data', 'quantiles.csv')) %>% 
+quantiles <- read_parquet(here::here('data', 'quantiles.parquet')) %>% 
     mutate(
         vehicle = paste(powertrain, vehicle_type, sep = "_"), 
         age_years = age_months / 12
@@ -65,12 +65,12 @@ quantiles_conventional <- quantiles_conventional[rep(1:rep_length, 3),]
 quantiles_conventional$powertrain <- rep(
     c('bev', 'hybrid', 'phev'), each = rep_length)
 quantiles_conventional$category <- 'conventional'
-df_fig1a <- rbind(quantiles_other, quantiles_conventional)
+df_fig1 <- rbind(quantiles_other, quantiles_conventional)
 
 # Save plot data for reproduction
-write_csv(df_fig1a, here::here('data', 'fig1a.csv'))
+qsave(df_fig1, here::here('data', 'df_fig1.qs'))
 
-fig1a <- df_fig1a %>%
+fig1 <- df_fig1 %>%
     set_powertrain_levels() %>% 
     ggplot() +  
     geom_ribbon(
@@ -127,7 +127,7 @@ fig1a <- df_fig1a %>%
         family = 'Roboto Condensed'
     )
 
-ggsave(here::here('figs', 'fig1a.png'), fig1a, width = 11, height = 3.5)
+ggsave(here::here('figs', 'fig1.png'), fig1, width = 11, height = 3.5)
 
 # FIG 1b ----
 

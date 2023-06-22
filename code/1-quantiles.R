@@ -18,7 +18,7 @@ quantiles <- ds %>%
     
 # Save
 
-write_csv(quantiles, here::here('data', 'quantiles.csv'))
+write_parquet(quantiles, here::here('data', 'quantiles.parquet'))
 
 # Separately compute the quantiles for BEVs only, separating out Tesla
 
@@ -36,5 +36,5 @@ quantiles_bev <- ds %>%
 
 # Save
 
-write_csv(quantiles_bev, here::here('data', 'quantiles_bev.csv'))
+write_parquet(quantiles_bev, here::here('data', 'quantiles_bev.parquet'))
 
