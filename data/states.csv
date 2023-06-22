@@ -1,0 +1,52 @@
+State,State Code,Region,Division,PADD,PADD_name
+Alabama,AL,South,East South Central,3,gulf-coast
+Alaska,AK,West,Pacific,5,west-coast-minus-ca
+Arizona,AZ,West,Mountain,5,west-coast-minus-ca
+Arkansas,AR,South,West South Central,3,gulf-coast
+California,CA,West,Pacific,5,ca
+Colorado,CO,West,Mountain,4,co
+Connecticut,CT,Northeast,New England,1A,new-england
+Delaware,DE,South,South Atlantic,1B,central-atlantic
+District of Columbia,DC,South,South Atlantic,1B,central-atlantic
+Florida,FL,South,South Atlantic,1C,fl
+Georgia,GA,South,South Atlantic,1C,lower-atlantic
+Hawaii,HI,West,Pacific,5,west-coast-minus-ca
+Idaho,ID,West,Mountain,4,rocky-mountain
+Illinois,IL,Midwest,East North Central,2,midwest
+Indiana,IN,Midwest,East North Central,2,midwest
+Iowa,IA,Midwest,West North Central,2,midwest
+Kansas,KS,Midwest,West North Central,2,midwest
+Kentucky,KY,South,East South Central,2,midwest
+Louisiana,LA,South,West South Central,3,gulf-coast
+Maine,ME,Northeast,New England,1A,new-england
+Maryland,MD,South,South Atlantic,1B,central-atlantic
+Massachusetts,MA,Northeast,New England,1A,ma
+Michigan,MI,Midwest,East North Central,2,midwest
+Minnesota,MN,Midwest,West North Central,2,mn
+Mississippi,MS,South,East South Central,3,gulf-coast
+Missouri,MO,Midwest,West North Central,2,midwest
+Montana,MT,West,Mountain,4,rocky-mountain
+Nebraska,NE,Midwest,West North Central,2,midwest
+Nevada,NV,West,Mountain,5,west-coast-minus-ca
+New Hampshire,NH,Northeast,New England,1A,new-england
+New Jersey,NJ,Northeast,Middle Atlantic,1B,central-atlantic
+New Mexico,NM,West,Mountain,3,gulf-coast
+New York,NY,Northeast,Middle Atlantic,1B,ny
+North Carolina,NC,South,South Atlantic,1C,lower-atlantic
+North Dakota,ND,Midwest,West North Central,2,midwest
+Ohio,OH,Midwest,East North Central,2,oh
+Oklahoma,OK,South,West South Central,2,midwest
+Oregon,OR,West,Pacific,5,west-coast-minus-ca
+Pennsylvania,PA,Northeast,Middle Atlantic,1B,central-atlantic
+Rhode Island,RI,Northeast,New England,1A,new-england
+South Carolina,SC,South,South Atlantic,1C,lower-atlantic
+South Dakota,SD,Midwest,West North Central,2,midwest
+Tennessee,TN,South,East South Central,2,midwest
+Texas,TX,South,West South Central,3,tx
+Utah,UT,West,Mountain,4,rocky-mountain
+Vermont,VT,Northeast,New England,1A,new-england
+Virginia,VA,South,South Atlantic,1C,lower-atlantic
+Washington,WA,West,Pacific,5,wa
+West Virginia,WV,South,South Atlantic,1C,lower-atlantic
+Wisconsin,WI,Midwest,East North Central,2,midwest
+Wyoming,WY,West,Mountain,4,rocky-mountain
