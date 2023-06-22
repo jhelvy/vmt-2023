@@ -84,3 +84,9 @@ Files:
 - fig4.csv
 
 Saved data files used to create figures 1 - 4.
+
+---------------------------------------------------
+
+File: pev-ranges.csv
+
+Hand-checked driving range for select PEV models. These were collected by searching OEM websites for specific trim-level ranges.

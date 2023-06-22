@@ -1,0 +1,254 @@
+make,model,year,trim,powertrain,vehicle_type,range,rangeCity,rangeHwy
+chevrolet,bolt ev,2017,lt,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2017,premier,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2017,unknown,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2018,lt,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2018,premier,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2019,lt,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2019,premier,bev,car,238,255.1,217.4
+chevrolet,bolt ev,2020,lt,bev,car,259,277.7,235.1
+chevrolet,bolt ev,2020,premier,bev,car,259,277.7,235.1
+chevrolet,bolt ev,2021,lt,bev,car,259,277.7,235.1
+chevrolet,bolt ev,2021,premier,bev,car,259,277.7,235.1
+chevrolet,bolt ev,2022,lt,bev,car,259,279.8,233.4
+chevrolet,bolt ev,2022,premier,bev,car,259,279.8,233.4
+fiat,500e,2013,battery electric,bev,car,87,91.84,81.48
+fiat,500e,2013,unknown,bev,car,87,91.84,81.48
+fiat,500e,2014,battery electric,bev,car,87,91.84,81.48
+fiat,500e,2014,unknown,bev,car,87,91.84,81.48
+fiat,500e,2015,battery electric,bev,car,87,91.84,81.48
+fiat,500e,2015,three,bev,car,87,91.84,81.48
+fiat,500e,2015,unknown,bev,car,87,91.84,81.48
+fiat,500e,2016,battery electric,bev,car,84,90.02,76.65
+fiat,500e,2016,unknown,bev,car,84,90.02,76.65
+fiat,500e,2017,battery electric,bev,car,84,90.02,76.65
+fiat,500e,2017,unknown,bev,car,84,90.02,76.65
+fiat,500e,2018,battery electric,bev,car,84,90,76.6
+fiat,500e,2019,battery electric,bev,car,84,90,76.6
+hyundai,ioniq,2017,base,bev,car,124,135.4,110
+hyundai,ioniq,2017,blue,bev,car,124,135.4,110
+hyundai,ioniq,2017,limited,bev,car,124,135.4,110
+hyundai,ioniq,2017,se,bev,car,124,135.4,110
+hyundai,ioniq,2017,sel,bev,car,124,135.4,110
+hyundai,ioniq,2017,unknown,bev,car,124,135.4,110
+hyundai,ioniq,2018,base,bev,car,124,135.4,110
+hyundai,ioniq,2018,limited,bev,car,124,135.4,110
+hyundai,ioniq,2019,base,bev,car,124,135.4,110
+hyundai,ioniq,2019,limited,bev,car,124,135.4,110
+hyundai,ioniq,2020,limited,bev,car,170,183.8,153.3
+hyundai,ioniq,2020,se,bev,car,170,183.8,153.3
+hyundai,ioniq,2021,limited,bev,car,170,183.8,153.3
+hyundai,ioniq,2021,se,bev,car,170,183.8,153.3
+kia,niro,2019,ex,bev,car,239,259,213.6
+kia,niro,2019,ex premium,bev,car,239,259,213.6
+kia,niro,2020,ex,bev,car,239,259,213.6
+kia,niro,2020,ex premium,bev,car,239,259,213.6
+kia,niro,2021,ex,bev,car,239,259,213.6
+kia,niro,2021,ex premium,bev,car,239,259,213.6
+kia,niro,2022,ex,bev,car,239,259,213.6
+kia,niro,2022,ex premium,bev,car,239,259,213.6
+nissan,leaf,2011,3.2,bev,car,73,NA,NA
+nissan,leaf,2011,sl,bev,car,73,NA,NA
+nissan,leaf,2011,sv,bev,car,73,NA,NA
+nissan,leaf,2011,unknown,bev,car,73,NA,NA
+nissan,leaf,2012,ex,bev,car,73,77.165,67.316
+nissan,leaf,2012,sl,bev,car,73,77.165,67.316
+nissan,leaf,2012,sv,bev,car,73,77.165,67.316
+nissan,leaf,2012,unknown,bev,car,73,77.165,67.316
+nissan,leaf,2012,v6,bev,car,73,77.165,67.316
+nissan,leaf,2013,lx,bev,car,75,82,65.6
+nissan,leaf,2013,rts,bev,car,75,82,65.6
+nissan,leaf,2013,s,bev,car,75,82,65.6
+nissan,leaf,2013,sl,bev,car,75,82,65.6
+nissan,leaf,2013,sv,bev,car,75,82,65.6
+nissan,leaf,2013,unknown,bev,car,75,82,65.6
+nissan,leaf,2014,ex-l,bev,car,84,92,74
+nissan,leaf,2014,platinum,bev,car,84,92,74
+nissan,leaf,2014,s,bev,car,84,92,74
+nissan,leaf,2014,sl,bev,car,84,92,74
+nissan,leaf,2014,sv,bev,car,84,92,74
+nissan,leaf,2014,unknown,bev,car,84,92,74
+nissan,leaf,2015,s,bev,car,84,92,74
+nissan,leaf,2015,sl,bev,car,84,92,74
+nissan,leaf,2015,sv,bev,car,84,92,74
+nissan,leaf,2015,unknown,bev,car,84,92,74
+nissan,leaf,2016,s,bev,car,84,92,74
+nissan,leaf,2016,sl,bev,car,107,116,95
+nissan,leaf,2016,sv,bev,car,107,116,95
+nissan,leaf,2017,s,bev,car,107,116,95
+nissan,leaf,2017,sl,bev,car,107,116,95
+nissan,leaf,2017,sv,bev,car,107,116,95
+nissan,leaf,2017,unknown,bev,car,107,116,95
+nissan,leaf,2018,s,bev,car,151,166,132.8
+nissan,leaf,2018,sl,bev,car,151,166,132.8
+nissan,leaf,2018,sv,bev,car,151,166,132.8
+nissan,leaf,2018,unknown,bev,car,151,166,132.8
+nissan,leaf,2019,s,bev,car,150,165.2,132.4
+nissan,leaf,2019,s plus,bev,car,226,245,202.2
+nissan,leaf,2019,sl plus,bev,car,215,233.7,192.5
+nissan,leaf,2019,sv plus,bev,car,215,233.7,192.5
+nissan,leaf,2020,s,bev,car,149,163.2,131.3
+nissan,leaf,2020,s plus,bev,car,226,245.0238,202.181
+nissan,leaf,2020,sl plus,bev,car,215,233.6614,192.4944
+nissan,leaf,2020,sv plus,bev,car,215,233.6614,192.4944
+nissan,leaf,2021,s,bev,car,149,163.2,131.3
+nissan,leaf,2021,s plus,bev,car,226,245,202.2
+nissan,leaf,2021,sl plus,bev,car,215,233.7,192.5
+nissan,leaf,2021,sv plus,bev,car,215,233.7,192.5
+nissan,leaf,2022,s plus,bev,car,149,NA,NA
+nissan,leaf,2022,sl plus,bev,car,215,NA,NA
+nissan,leaf,2022,sv plus,bev,car,215,NA,NA
+tesla,model 3,2017,base,bev,car,310,321.8584,295.4857
+tesla,model 3,2017,unknown,bev,car,310,321.8584,295.4857
+tesla,model 3,2018,awd,bev,car,310,320.2,297.2
+tesla,model 3,2018,base,bev,car,310,NA,NA
+tesla,model 3,2018,long range,bev,car,310,324.081,292.8001
+tesla,model 3,2018,mid range,bev,car,260,270.1403,247.5711
+tesla,model 3,2019,awd,bev,car,310,320.2,297.2
+tesla,model 3,2019,base,bev,car,220,230.5,206.3
+tesla,model 3,2019,mid range,bev,car,264,274.1,251.2
+tesla,model 3,2020,awd,bev,car,310,NA,NA
+tesla,model 3,2020,base,bev,car,220,NA,NA
+tesla,model 3,2020,performance,bev,car,315,NA,NA
+tesla,model 3,2021,awd,bev,car,353,369.5,333.8
+tesla,model 3,2021,base,bev,car,263,277.5,234.7
+tesla,model 3,2021,performance,bev,car,315,328.7,299
+tesla,model 3,2022,base,bev,car,272,284,260.6
+tesla,model 3,2022,long range,bev,car,358,367.5,345.4
+tesla,model 3,2022,performance,bev,car,315,328.7,299
+tesla,model s,2012,85,bev,car,265,262.69,266.78
+tesla,model s,2012,performance,bev,car,265,262.69,266.78
+tesla,model s,2012,s,bev,car,265,262.69,266.78
+tesla,model s,2012,unknown,bev,car,265,262.69,266.78
+tesla,model s,2013,60,bev,car,208,205.7,210.7
+tesla,model s,2013,85,bev,car,265,262.7,266.8
+tesla,model s,2013,performance,bev,car,265,262.7,266.8
+tesla,model s,2013,s,bev,car,139,138.5,140.7
+tesla,model s,2014,60,bev,car,208,205.7,210.7
+tesla,model s,2014,85,bev,car,265,262.7,266.8
+tesla,model s,2014,p90d,bev,car,250,NA,NA
+tesla,model s,2014,s,bev,car,208,205.7,210.7
+tesla,model s,2015,60,bev,car,208,205.7,210.7
+tesla,model s,2015,70,bev,car,234,NA,NA
+tesla,model s,2015,70d,bev,car,240,242.8,246.4
+tesla,model s,2015,85,bev,car,265,262.7,266.8
+tesla,model s,2015,85d,bev,car,270,257.1,285.3
+tesla,model s,2015,90d,bev,car,270,257.1,285.3
+tesla,model s,2015,p90d,bev,car,253,242.3,265.5
+tesla,model s,2015,performance,bev,car,253,242.3,265.5
+tesla,model s,2015,s,bev,car,208,205.7,210.7
+tesla,model s,2016,60,bev,car,210,207.5,214.8
+tesla,model s,2016,60d,bev,car,218,221.1,226.9
+tesla,model s,2016,70,bev,car,234,234,234.3
+tesla,model s,2016,75,bev,car,249,246.1,252.7
+tesla,model s,2016,85,bev,car,265,262.7,266.8
+tesla,model s,2016,85d,bev,car,270,257.1,285.3
+tesla,model s,2016,90d,bev,car,294,285.7,303.2
+tesla,model s,2016,p100d,bev,car,315,305.9,346.9
+tesla,model s,2016,p90d,bev,car,270,259.6,283.4
+tesla,model s,2016,s,bev,car,210,207.5,214.8
+tesla,model s,2017,100d,bev,car,315,305.9,346.9
+tesla,model s,2017,60,bev,car,210,207.5,214.8
+tesla,model s,2017,60d,bev,car,218,221.1,226.9
+tesla,model s,2017,70,bev,car,234,NA,NA
+tesla,model s,2017,70d,bev,car,240,NA,NA
+tesla,model s,2017,75,bev,car,249,246.1,252.7
+tesla,model s,2017,75d,bev,car,259,255,264.6
+tesla,model s,2017,90d,bev,car,294,286.8,302.7
+tesla,model s,2017,p100d,bev,car,335,333.1,337.2
+tesla,model s,2017,s,bev,car,210,207.5,214.8
+tesla,model s,2018,100d,bev,car,335,333.1115,337.2373
+tesla,model s,2018,75d,bev,car,259,255,264.6
+tesla,model s,2018,p100d,bev,car,315,297.1195,336.9426
+tesla,model s,2018,performance,bev,car,315,297.1195,336.9426
+tesla,model s,2019,100d,bev,car,335,333.1115,337.2373
+tesla,model s,2019,75d,bev,car,259,255,264.6
+tesla,model s,2019,long range,bev,car,370,381.5,355.9
+tesla,model s,2019,p100d,bev,car,315,297.1195,336.9426
+tesla,model s,2019,performance,bev,car,315,NA,NA
+tesla,model s,2020,100d,bev,car,335,NA,NA
+tesla,model s,2020,long range,bev,car,373,384.3318,358.5551
+tesla,model s,2020,long range plus,bev,car,402,416.2,383.8
+tesla,model s,2020,p100d,bev,car,348,NA,NA
+tesla,model s,2020,performance,bev,car,348,NA,NA
+tesla,model s,2021,long range,bev,car,405,420,387.7
+tesla,model s,2021,long range plus,bev,car,402,NA,NA
+tesla,model s,2021,plaid,bev,car,348,353.7,341
+tesla,model s,2022,long range,bev,car,315,NA,NA
+tesla,model s,2022,plaid,bev,car,396,NA,NA
+volkswagen,e-golf,2015,base,bev,car,83,88.9,75.2
+volkswagen,e-golf,2015,e-golf limited edition,bev,car,83,88.9,75.2
+volkswagen,e-golf,2015,e-golf sel premium,bev,car,83,88.9,75.2
+volkswagen,e-golf,2015,unknown,bev,car,83,88.9,75.2
+volkswagen,e-golf,2016,e-golf se,bev,car,83,88.9,75.2
+volkswagen,e-golf,2016,e-golf sel premium,bev,car,83,88.9,75.2
+volkswagen,e-golf,2016,unknown,bev,car,83,88.9,75.2
+volkswagen,e-golf,2017,e-golf limited edition,bev,car,125,130.3,117.7
+volkswagen,e-golf,2017,e-golf se,bev,car,125,130.3,117.7
+volkswagen,e-golf,2017,e-golf sel premium,bev,car,125,130.3,117.7
+volkswagen,e-golf,2018,e-golf se,bev,car,125,130.3,117.7
+volkswagen,e-golf,2018,e-golf sel premium,bev,car,125,130.3,117.7
+volkswagen,e-golf,2019,e-golf se,bev,car,125,130.64,117.86
+volkswagen,e-golf,2019,e-golf sel premium,bev,car,125,130.64,117.86
+audi,e-tron,2019,premium plus,bev,suv,204,NA,NA
+audi,e-tron,2019,prestige,bev,suv,204,NA,NA
+audi,e-tron,2021,premium,bev,suv,222,NA,NA
+audi,e-tron,2021,premium plus,bev,suv,222,NA,NA
+audi,e-tron,2021,prestige,bev,suv,222,NA,NA
+audi,e-tron,2022,chronos,bev,suv,222,NA,NA
+audi,e-tron,2022,premium,bev,suv,222,NA,NA
+audi,e-tron,2022,premium plus,bev,suv,222,NA,NA
+audi,e-tron sportback,2020,premium plus,bev,suv,218,NA,NA
+audi,e-tron sportback,2020,prestige,bev,suv,218,NA,NA
+audi,e-tron sportback,2021,premium,bev,suv,218,NA,NA
+audi,e-tron sportback,2021,premium plus,bev,suv,218,NA,NA
+audi,e-tron sportback,2021,prestige,bev,suv,218,NA,NA
+audi,e-tron sportback,2022,premium,bev,suv,218,NA,NA
+audi,e-tron sportback,2022,prestige,bev,suv,218,NA,NA
+chevrolet,bolt euv,2022,lt,bev,suv,247,NA,NA
+chevrolet,bolt euv,2022,premier,bev,suv,247,NA,NA
+ford,mustang mach-e,2021,california route 1 rwd,bev,suv,300,NA,NA
+ford,mustang mach-e,2021,gt awd,bev,suv,250,NA,NA
+ford,mustang mach-e,2021,premium awd,bev,suv,300,NA,NA
+ford,mustang mach-e,2021,premium rwd,bev,suv,300,NA,NA
+ford,mustang mach-e,2021,select awd,bev,suv,230,NA,NA
+ford,mustang mach-e,2021,select rwd,bev,suv,230,NA,NA
+hyundai,ioniq 5,2022,limited,bev,suv,303,NA,NA
+hyundai,ioniq 5,2022,se,bev,suv,303,NA,NA
+hyundai,ioniq 5,2022,sel,bev,suv,303,NA,NA
+kia,ev6,2022,gt-line,bev,suv,252,NA,NA
+kia,ev6,2022,wind,bev,suv,310,NA,NA
+tesla,model x,2016,60d,bev,suv,200,NA,NA
+tesla,model x,2016,75d,bev,suv,237,NA,NA
+tesla,model x,2016,90d,bev,suv,257,NA,NA
+tesla,model x,2016,p100d,bev,suv,289,NA,NA
+tesla,model x,2016,p90d,bev,suv,250,NA,NA
+tesla,model x,2017,100d,bev,suv,295,NA,NA
+tesla,model x,2017,75d,bev,suv,238,NA,NA
+tesla,model x,2017,90d,bev,suv,257,NA,NA
+tesla,model x,2017,long range,bev,suv,295,NA,NA
+tesla,model x,2017,p100d,bev,suv,289,NA,NA
+tesla,model x,2018,100d,bev,suv,295,NA,NA
+tesla,model x,2018,75d,bev,suv,238,NA,NA
+tesla,model x,2018,p100d,bev,suv,289,NA,NA
+tesla,model x,2019,100d,bev,suv,295,NA,NA
+tesla,model x,2019,base,bev,suv,325,NA,NA
+tesla,model x,2019,long range,bev,suv,325,NA,NA
+tesla,model x,2019,p100d,bev,suv,289,NA,NA
+tesla,model x,2019,performance,bev,suv,289,NA,NA
+tesla,model x,2020,100d,bev,suv,295,NA,NA
+tesla,model x,2020,long range,bev,suv,328,NA,NA
+tesla,model x,2020,long range plus,bev,suv,371,NA,NA
+tesla,model x,2020,p100d,bev,suv,289,NA,NA
+tesla,model x,2021,100d,bev,suv,289,NA,NA
+tesla,model x,2021,long range,bev,suv,351,NA,NA
+tesla,model x,2021,long range plus,bev,suv,371,NA,NA
+tesla,model x,2022,base,bev,suv,348,NA,NA
+tesla,model x,2022,long range,bev,suv,348,NA,NA
+tesla,model x,2022,plaid,bev,suv,333,NA,NA
+tesla,model y,2020,base,bev,suv,330,NA,NA
+tesla,model y,2021,base,bev,suv,330,NA,NA
+tesla,model y,2022,base,bev,suv,330,NA,NA
+kia,niro,2018,ex phev,phev,car,239,259,213.6
+kia,niro,2018,ex premium phev,phev,car,239,259,213.6
+kia,niro,2018,lx phev,phev,car,239,259,213.6
