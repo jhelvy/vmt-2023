@@ -187,26 +187,7 @@ f1 <- qread(here::here('models', 'f1.qs'))
 d1 <- qread(here::here('models', 'd1.qs'))
 e1 <- qread(here::here('models', 'e1.qs'))
 
-write.xlsx(
-    d1$summary, 
-    file = here::here('tables', 'table4.xlsx'), 
-    sheetName = "4a"
-)
-write.xlsx(
-    f1$summary, 
-    here::here('tables', 'table4.xlsx'), 
-    sheetName = "4b", 
-    append = TRUE
-)
-write.xlsx(
-    e1$summary, 
-    here::here('tables', 'table4.xlsx'), 
-    sheetName = "4c",
-    append = TRUE
-)
-write.xlsx(
-    c1$summary, 
-    here::here('tables', 'table4.xlsx'), 
-    sheetName = "4d",
-    append = TRUE
-)
+write_csv(d1$summary, here::here('tables', 'table4a.csv'))
+write_csv(f1$summary, here::here('tables', 'table4b.csv'))
+write_csv(e1$summary, here::here('tables', 'table4c.csv'))
+write_csv(c1$summary, here::here('tables', 'table4d.csv'))
