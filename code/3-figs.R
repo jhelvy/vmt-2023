@@ -158,7 +158,8 @@ df_fig1b <- df_fig1 %>%
             powertrain == 'bev' & tesla == 1 ~ 'Tesla BEV',
             powertrain == 'bev' & tesla == 0 ~ 'Non-Tesla BEV',
             TRUE ~ 'Conventional'
-    )) 
+    )) %>% 
+    ungroup()
 
 # Save plot data for reproduction
 qsave(df_fig1b, here::here('data', 'df_fig1b.qs'))

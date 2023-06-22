@@ -127,7 +127,7 @@ dt_bev_car <- load_dt_bev_car() %>%
 
 tictoc::tic()
 d1 <- feols(
-    fml = miles ~ age_years*cents_per_mile + age_years*range_type*range + age_years*model,
+    fml = miles ~ age_years*cents_per_mile + age_years*range_type*range + age_years*model + state,
     data = dt_bev_car
         
 )
@@ -197,12 +197,10 @@ dt_bev_car <- load_dt_bev_car() %>%
     left_join(quantile90, by = 'age_months') %>% 
     filter(miles >= miles90)
 
-tictoc::tic()
 model <- feols(
     fml = miles ~ age_years + model,
     data = dt_bev_car
 )
-tictoc::toc()
 
 summary(model)
 age_years_coefs(model)
