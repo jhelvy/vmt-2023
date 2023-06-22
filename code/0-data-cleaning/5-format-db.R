@@ -72,7 +72,6 @@ dt_match_elec[, elec_price := get_mean_elec_price(
 
 # Drop missing matches
 dt_match_elec <- dt_match_elec %>% 
-    filter(!is.na(elec_price_median)) %>% 
     filter(!is.nan(elec_price))
 
 
@@ -89,7 +88,8 @@ dt[, start := ymd(paste0(year, "-01-01"))]
 
 # Read in gas price data
 
-gas_prices <- read_parquet(here::here('data', 'gasoline-prices.parquet')) %>%
+gas_prices <- read_parquet(
+    here::here('data', 'gasoline-prices.parquet')) %>%
     select(state = state_code, date, price) %>% 
     as.data.table()
 
@@ -158,6 +158,7 @@ dt <- compute_fuel_cost(dt, paths)
 dt <- final_fixes(dt)
 
 # Write to disc
+
 write_parquet(dt, PATH_DB)
 
 

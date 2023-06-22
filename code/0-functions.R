@@ -154,7 +154,7 @@ compute_fuel_cost <- function(dt, paths) {
 
     dt <- dt %>%
         left_join(
-            read_csv(here::here('data', 'dict_final.csv')),
+            read_parquet(here::here('data', 'dict_final.parquet')),
             by = c(
                 'powertrain', 'vehicle_type', 'year', 'make', 'model',
                 'trim'
