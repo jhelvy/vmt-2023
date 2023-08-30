@@ -218,50 +218,64 @@ ggsave(here::here('figs', 'fig1b.png'), fig1b, width = 6, height = 4)
 
 # FIG 2 ----
 
+# 2a - cars ----
+
 # Load data
 
-dt_car <- load_dt_car() %>% 
-    select(powertrain, age_years, miles)
+dt_car <- load_dt_car() %>%
+    select(powertrain, age_years, miles, make) %>%
+    separate_bev_tesla() %>%
+    select(-make)
 
 # Load estimated results
 
-x1 <- qread(here::here('models', 'b1.qs'))
+x1 <- qread(here::here('models', 'b2.qs'))
 
 # Make data frame for annotations and fit line for each powertrain
 
-effects <- count(dt_car, powertrain) %>% 
+effects_2a <- count(dt_car, powertrain) %>%
     mutate(slope = c(
-        x1$coefs['age_years'], 
+        x1$coefs['age_years'],
         sum(x1$coefs[c('age_years', 'age_years:powertrainhybrid')]),
         sum(x1$coefs[c('age_years', 'age_years:powertrainphev')]),
-        sum(x1$coefs[c('age_years', 'age_years:powertrainbev')])
-    )) %>% 
-    set_powertrain_levels() %>% 
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev')]),
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev_tesla')])
+    )) %>%
+    set_powertrain_levels_tesla() %>%
     mutate(
         label_n = paste0(powertrain_label, " (N = ", scales::comma(n), ")"),
         label_fit = paste0(
             "Fit: ", scales::comma(round(slope*1000)), " miles / year")
-    ) 
+    )
 
 # Set factor levels
-facet_levels <- effects$label_n
-levels(effects$powertrain) <- facet_levels
+facet_levels <- effects_2a$label_n
+levels(effects_2a$powertrain) <- facet_levels
 levels(dt_car$powertrain) <- facet_levels
 
 # Save plot data for reproduction
-qsave(effects, here::here('data', 'df_fig2_effects.qs'))
+qsave(effects_2a, here::here('data', 'fig2a-effects.qs'))
 
-fig2 <- dt_car %>%
+fig2a <- dt_car %>%
     ggplot(aes(x = age_years, y = miles)) +
-    geom_scattermore(size = 0.1, alpha = 0.1) + 
+    geom_scattermore(size = 0.1, alpha = 0.1) +
+    # Dotted line first for extrapolation, solid line for interpolation
     geom_smooth(
         color = 'red',
         linewidth = 0.7,
         method = 'lm',
         se = FALSE,
-        fullrange = TRUE
+        fullrange = TRUE,
+        linetype = "dotted"
     ) +
-    facet_wrap(vars(powertrain)) +
+    geom_smooth(
+        color = 'red',
+        linewidth = 0.7,
+        method = 'lm',
+        se = FALSE,
+        fullrange = FALSE
+    ) +
+    facet_wrap(vars(powertrain), nrow = 1) +
     scale_x_continuous(limits = c(2, 9), breaks = seq(2, 9, 1)) +
     scale_y_continuous(
         limits = c(0, 250),
@@ -274,7 +288,7 @@ fig2 <- dt_car %>%
         y = 'Vehicle mileage (thousands)'
     ) +
     geom_text(
-        data = effects,
+        data = effects_2a,
         mapping = aes(x = 2.1, y = 240, label = label_fit),
         color = "red",
         hjust = 0,
@@ -282,181 +296,238 @@ fig2 <- dt_car %>%
     )
 
 tictoc::tic()
-ggsave(here::here('figs', 'fig2.png'), fig2, width = 7, height = 6)
+ggsave(here::here('figs', 'fig2a.png'), fig2a, width = 12, height = 3)
 tictoc::toc()
-# 17.579 sec
 
 # Drop objects for space
 
-rm(fig2)
-rm(dt_car) 
+rm(fig2a)
+rm(dt_car)
 
+# 2b - SUVs ----
 
+# Load data
+
+dt_suv <- load_dt_suv() %>%
+    select(powertrain, age_years, miles, make) %>%
+    separate_bev_tesla() %>%
+    select(-make)
+
+# Load estimated results
+
+x1 <- qread(here::here('models', 'b2s.qs'))
+
+# Make data frame for annotations and fit line for each powertrain
+
+effects_2b <- count(dt_suv, powertrain) %>%
+    rbind(data.frame(powertrain = 'phev', n = 0)) %>%
+    mutate(slope = c(
+        x1$coefs['age_years'],
+        sum(x1$coefs[c('age_years', 'age_years:powertrainhybrid')]),
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev')]),
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev_tesla')]),
+        0
+    )) %>%
+    set_powertrain_levels_tesla() %>%
+    mutate(
+        label_n = paste0(powertrain_label, " (N = ", scales::comma(n), ")"),
+        label_fit = paste0(
+            "Fit: ", scales::comma(round(slope*1000)), " miles / year")
+    ) %>%
+    arrange(powertrain_label)
+
+# Set factor levels
+facet_levels <- effects_2b$label_n
+levels(effects_2b$powertrain) <- facet_levels
+levels(dt_suv$powertrain) <- facet_levels
+effects_2b$label_fit[3] <- NA
+
+# Save plot data for reproduction
+qsave(effects_2b, here::here('data', 'fig2a-effects.qs'))
+
+fig2b <- dt_suv %>%
+    ggplot(aes(x = age_years, y = miles)) +
+    geom_scattermore(size = 0.1, alpha = 0.1) +
+    # Dotted line first for extrapolation, solid line for interpolation
+    geom_smooth(
+        color = 'red',
+        linewidth = 0.7,
+        method = 'lm',
+        se = FALSE,
+        fullrange = TRUE,
+        linetype = "dotted"
+    ) +
+    geom_smooth(
+        color = 'red',
+        linewidth = 0.7,
+        method = 'lm',
+        se = FALSE,
+        fullrange = FALSE
+    ) +
+    facet_wrap(vars(powertrain), nrow = 1) +
+    scale_x_continuous(limits = c(2, 9), breaks = seq(2, 9, 1)) +
+    scale_y_continuous(
+        limits = c(0, 250),
+        breaks = seq(0, 250, 50),
+        labels = scales::comma
+    ) +
+    plot_theme() +
+    labs(
+        x = "Vehicle age (years)",
+        y = 'Vehicle mileage (thousands)'
+    ) +
+    geom_text(
+        data = effects_2b,
+        mapping = aes(x = 2.1, y = 240, label = label_fit),
+        color = "red",
+        hjust = 0,
+        family = 'Roboto Condensed'
+    )
+
+tictoc::tic()
+ggsave(here::here('figs', 'fig2b.png'), fig2b, width = 12, height = 3)
+tictoc::toc()
+
+# Drop objects for space
+
+rm(fig2b)
+rm(dt_suv)
 
 
 # FIG 3 -----
 
 # Distribution of cost_per_mile by powertrain
 
-dt_car <- load_dt_car() %>% 
-    select(powertrain, cents_per_mile)
+# Here I manually compute the boxplot summary statistics so
+# that the data frame can be saved. Followed this guide:
+# https://www.sharpsightlabs.com/blog/ggplot-boxplot/
 
-fig3 <- dt_car %>%
+dt_fig3 <- load_dt_car() %>%
+    select(powertrain, vehicle_type, cents_per_mile) %>%
+    rbind(
+        load_dt_suv() %>%
+        select(powertrain, vehicle_type, cents_per_mile)
+    ) %>%
+    group_by(powertrain, vehicle_type) %>%
+    mutate(
+        median = median(cents_per_mile),
+        iqr = IQR(cents_per_mile),
+        q25 = fquantile(cents_per_mile, 0.25),
+        q75 = fquantile(cents_per_mile, 0.75),
+        lower = q25 - 1.5*iqr,
+        upper = q75 + 1.5*iqr
+    ) %>%
+    # Drop outliers
+    filter(cents_per_mile > lower, cents_per_mile < upper) %>%
+    mutate(
+        min = min(cents_per_mile),
+        max = max(cents_per_mile)
+    ) %>%
+    slice(1)
+
+# Save plot data for reproduction
+qsave(dt_fig3, here::here('data', 'dt_fig3.qs'))
+
+# dt_fig3 <- qread(here::here('data', 'dt_fig3.qs'))
+
+fig3 <- dt_fig3 %>%
     mutate(
         powertrain = as.character(str_to_title(powertrain)),
         powertrain = ifelse(
             powertrain  == 'Bev', 'BEV', ifelse(
                 powertrain == 'Phev', 'PHEV', powertrain)),
+        powertrain = as.factor(powertrain),
         powertrain = fct_relevel(powertrain, c(
             "BEV", "PHEV", "Hybrid", "Conventional"
-        ))
-    ) %>% 
-    ggplot()+
+        )),
+        vehicle_type = ifelse(vehicle_type == 'car', 'Car', 'SUV')
+    ) %>%
+    ggplot(aes(y = powertrain)) +
     geom_boxplot(
         aes(
-            x = cents_per_mile,
-            y = powertrain), 
-        alpha = 0.2,
+            xlower = q25,
+            xupper = q75,
+            xmiddle = median,
+            xmin = min,
+            xmax = max,
+            fill = vehicle_type
+        ),
+        position = position_dodge(preserve = "single"),
+        stat = "identity",
+        alpha = 0.5,
         width = 0.7,
-        fill = color_ev,
+        size = 0.2,
         outlier.shape = NA
     ) +
-    plot_theme() + 
+    plot_theme() +
+    theme(legend.position = 'bottom') +
+    scale_fill_manual(values = c(color_cv, color_ev)) +
+    coord_cartesian(xlim = c(0, 18)) +
+    scale_x_continuous(breaks = seq(0, 18, 2)) +
     labs(
-        x = "Cents per mile", 
-        y = ""
+        x = "Cents per mile",
+        y = "",
+        fill = "Vehicle Type"
     ) +
-    coord_cartesian(xlim = c(0, 16)) +
-    scale_x_continuous(breaks = seq(0, 16, 2))
-
-ggsave(
-    here::here('figs', 'fig3.png'), fig3,
-    width = 6, height = 3
-)
-
-
-
-# FIG 4 ----
-
-# Min and max gas prices and ranges
-
-dt <- read_parquet(here::here('data', 'gasoline-prices.parquet'))
-gas_price_min <- min(dt$price)
-gas_price_max <- max(dt$price)
-dt <- load_dt_bev_car() %>% 
-    filter(make == 'tesla', model == 'model 3') %>% 
-    distinct(model, range) %>% 
-    summarise(min = min(range), max = max(range))
-range_min <- dt$min
-range_max <- dt$max
-
-# First get the mpg and annual mileage for each CV car
-
-cv_mpg <- load_dt_cv_car() %>%
-    filter(mpg > 0) %>% 
-    group_by(make, model) %>%
-    summarise(mpg = round(mean(mpg, na.rm = TRUE))) %>%
-    arrange(mpg)
-coef_cv <- qread(here::here('models', 'c1.qs'))$coefs
-cv_miles <- coef_cv['age_years'] + coef_cv[names(coef_cv)[str_detect(names(coef_cv), "age_years:model")]]
-names(cv_miles) <- str_replace(names(cv_miles), "age_years:model", "")
-cv_miles <- c(coef_cv['age_years'], cv_miles)
-names(cv_miles)[1] <- '3 series'
-mileage <- data.frame(
-    model = names(cv_miles), 
-    mileage = cv_miles
-) %>% 
-    left_join(cv_mpg, by = 'model') %>% 
-    mutate(
-        make = ifelse(
-            make == 'bmw', 'BMW', ifelse(
-                make == 'kia', 'KIA', str_to_title(make))), 
-        model = ifelse(
-            model == 'es', 'ES', ifelse(
-                model == 'mkz', 'MKZ', str_to_title(model))), 
-        vehicle = paste0(make, " ", model, " (", mpg, " mpg)")
-    ) %>% 
-    # Include only select models
-    filter(model %in% c(
-        '3 Series', 'Accord', "Camry", "Civic", "Cruze", 'Outback', 
-        'Spark'
-    ))
-
-# Then compute the BEV mileage (based on range)
-
-coef_bev <- qread(here::here('models', 'd1.qs'))$coefs
-range_coef <- coef_bev['age_years:range']
-mileage_model3 <- coef_bev['age_years'] + coef_bev['age_years:modelmodel 3']
-mileage_bev <- data.frame(range = seq(200, 400, 10)) %>% 
-    mutate(mileage = mileage_model3 + range*range_coef)
-
-# Compute gas price to meet gap 
-
-cpm_cv <- coef_cv['age_years:cents_per_mile']
-result <- list()
-for (i in 1:nrow(mileage_bev)) {
-    row <- mileage_bev[i,]
-    result[[i]] <- mileage %>% 
-        mutate(
-            range = row$range,
-            mileage_bev = row$mileage,
-            gap_miles = mileage - mileage_bev, 
-            gas_price = mpg*(gap_miles / abs(cpm_cv) / 100),
-        )
-}
-df_fig4 <- do.call(rbind, result) %>% 
-    arrange(vehicle)
-
-# Save plot data for reproduction
-qsave(df_fig4, here::here('data', 'df_fig4.qs'))
-
-fig4 <- df_fig4 %>% 
-    ggplot(aes(x = range, y = gas_price)) +
-    geom_textline(
-        aes(group = vehicle, label = vehicle), 
-        family = 'Roboto Condensed', 
-        size = 3, hjust = 0.2
-    ) +
-    plot_theme() + 
-    scale_x_continuous(
-        breaks = seq(200, 400, 50),
-        sec.axis = sec_axis(
-            ~(.*range_coef + mileage_model3)*1000,
-            labels = scales::comma_format(),
-            name = "Annual Mileage",
-            breaks = seq(8900, 11000, by = 200)
-        )
-    ) +
-    scale_y_continuous(
-        breaks = seq(2.5, 10, 2.5),
-        labels = scales::dollar_format()
-    ) +
-    coord_cartesian(
-        xlim = c(200, 400),
-        ylim = c(2, 11)
-    ) +
-    labs(
-        x = "Tesla Model 3 Range (miles)",
-        y = "Gasoline Price ($/gal)",
-        title = "Equivalent Annual Mileage for Tesla Model 3 BEV and Select CVs",
-        subtitle = "Each line shows the gasoline price and BEV driving range where the CV and BEV have equal annual mileage,\nwhich increases as BEV driving range increases and gasoline price decreases."
-    ) +
-    # Add labels
-    annotate(
-        geom = "rect",
-        xmin = range_min, xmax = range_max,
-        ymin = gas_price_min, ymax = gas_price_max,
-        fill = "grey55", alpha = 0.3
-    ) +
-    annotate(
-        geom = "text",
-        x = range_min + 2, y = 2.1,
-        label = "Historically observed gas prices\nand Model 3 driving ranges",
-        hjust = 0, size = 3,
-        family = 'Roboto Condensed'
+    geom_label(
+        data = data.frame(
+            powertrain = 'PHEV', vehicle_type = 'SUV',
+            x = 6, label = "No data for PHEV SUVs"
+        ),
+        mapping = aes(x = x, label = label),
+        color = color_ev,
+        size = 2,
+        family = 'Roboto Condensed',
+        nudge_y = 0.2
     )
 
 ggsave(
-    here::here('figs', 'fig4.png'), fig4, 
-    width = 6.5, height = 5
+    here::here('figs', 'fig3.png'), fig3,
+    width = 6, height = 3.2
 )
+
+
+# Figure on non-linear range relationship with annual mileage -----
+
+dt_bev_car <- load_dt_bev_car() %>%
+    mutate(
+        range_type = ifelse(
+            range < 100, 'low', ifelse(
+                between(range, 100, 200), 'mid', 'high')),
+        my = as.factor(year),
+        annual_mileage = miles/age_years
+    )
+dt_bev_car$range_type <- factor(dt_bev_car$range_type, c(
+    'low', 'mid', 'high'))
+
+dt_bev_car %>%
+    group_by(range, range_type) %>%
+    summarise(
+        annual_mileage_mean = mean(annual_mileage),
+        annual_mileage_median = median(annual_mileage)
+    ) %>%
+    pivot_longer(
+        values_to = 'value',
+        names_to = 'stat',
+        cols = starts_with('annual_mileage')
+    ) %>%
+    separate(stat, into = c('drop1', 'drop2', 'stat')) %>%
+    mutate(stat = paste(stat, 'annual miles')) %>%
+    ggplot(
+        aes(
+            x = range,
+            y = value,
+            color = range_type
+        )
+    ) +
+    geom_point() +
+    facet_wrap(vars(stat)) +
+    plot_theme() +
+    labs(
+        x = 'Range',
+        y = 'Miles per year',
+        color = 'Range type'
+    ) +
+    theme(legend.position = 'bottom')
+
+ggsave(here::here('figs', 'fig-non-linear-range.png'), width = 9, height = 5)

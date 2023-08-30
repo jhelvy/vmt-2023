@@ -274,30 +274,6 @@ rm(d4)
 rm(dt_bev_car)
 gc()
 
-#d5 GAM with Box-Cox Transformation
-
-library(MASS)
-library(mgcv)
-
-b <- boxcox(lm(dt_bev_car$range ~ 1))
-lambda <- b$x[which.max(b$y)]
-lambda
-
-dt_cb <- dt_bev_car %>% 
-    mutate(range = (range ^ lambda - 1) / lambda)
-
-tictoc::tic()
-d5 <- feols(
-     fml=miles ~ age_years*cents_per_mile + age_years*range_type*range + age_years*model+state,
-    data = dt_cb
-)
-tictoc::toc()
-
-summary(d5)
-age_years_coefs(d5)
-save_model_results(d5)
-rm(d5)
-    
 
 
 # E  | HEV powertrain, cars only ----
@@ -382,6 +358,9 @@ dt_cv_car %>%
     count(below_top_bev) %>% 
     mutate(p = n / sum(n))
 rm(dt_cv_car)
+
+
+
 
 # I NHTS models------
 
