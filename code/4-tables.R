@@ -1,4 +1,5 @@
 source(here::here('code', '0-functions.R'))
+source(here::here('code', '0-globals.R'))
 
 # Summary statistics for cars and SUVs ----
 

@@ -1,4 +1,5 @@
 source(here::here('code', '0-functions.R'))
+source(here::here('code', '0-globals.R'))
 
 color_cv <- "grey42" # 'indianred1'
 color_ev <- "#00BA38" # "forestgreen"
