@@ -1,7 +1,7 @@
 # Load packages and custom functions
 
 source(here::here('code', '0-functions.R'))
-source(here::here('code', '0-set-paths.R'))
+source(here::here('code', '0-globals.R'))
 
 # Models
 

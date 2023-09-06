@@ -5,8 +5,8 @@ set.seed(5678)
 # install.packages(c(
 #     'arrow', 'data.table', 'tidyverse', 'logitr',
 #     'here', 'tictoc', 'broom', 'fixest', 'cowplot',
-#     'scattermore', 'readxl', 'fuzzyjoin', 'zipcodeR',
-#     'tictoc', 'terra', 'lubridate', 'texreg', 'geomtextpath'
+#     'scattermore', 'readxl', 'zipcodeR',
+#     'tictoc', 'terra', 'lubridate', 'texreg'
 # ))
 
 library(arrow)
@@ -22,10 +22,8 @@ library(readxl)
 library(zipcodeR)
 library(lubridate)
 library(texreg)
-library(ggpubr)
 library(ggrepel)
 library(xtable)
-library(geomtextpath)
 library(kableExtra)
 
 # Settings
