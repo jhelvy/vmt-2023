@@ -186,8 +186,7 @@ dt_nhts <- dt_nhts %>%
 # that the driver(s) / owner(s) of that vehicle saw during the life of the
 # vehicle. I haven't found an efficient way to do this. The code below takes
 # roughly 5 hours to run on my computer. (for 40M used listings)
-#
-# AY: I wonder if left_joining relevant gas prices and then summarizing, instead of doing this row-by-row, would be more efficient
+
 
 # Create the start date for each listing based on the model year
 dt_nhts <- as.data.table(dt_nhts)
