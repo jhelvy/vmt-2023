@@ -9,43 +9,43 @@ color_tesla <- "#619CFF" # "dodgerblue"
 
 # Read in quantile data, quick formatting
 
-quantiles <- read_parquet(here::here('data', 'quantiles.parquet')) %>% 
+quantiles <- read_parquet(here::here('data', 'quantiles.parquet')) %>%
     mutate(
-        vehicle = paste(powertrain, vehicle_type, sep = "_"), 
+        vehicle = paste(powertrain, vehicle_type, sep = "_"),
         age_years = age_months / 12
-    ) %>% 
+    ) %>%
     # Drop non-conventional SUVs - there's just not enough to make the figures
-    filter(! ((powertrain != 'conventional') & (vehicle_type == 'suv'))) %>% 
-    filter(between(age_years, AGE_YEARS_MIN, AGE_YEARS_MAX)) # Set in '0-functions.R'
+    filter(! ((powertrain != 'conventional') & (vehicle_type == 'suv'))) %>%
+    filter(between(age_years, AGE_YEARS_MIN, AGE_YEARS_MAX))
 
 # Plot of all powertrain-type combos ----
 
-quantiles %>% 
-    ggplot() +  
+quantiles %>%
+    ggplot() +
     geom_ribbon(
         aes(
-            x = age_years, 
-            ymin = miles25, 
+            x = age_years,
+            ymin = miles25,
             ymax = miles75
-        ), 
+        ),
         fill = color_cv,
         alpha = 0.25) +
     geom_line(
         aes(
-            x = age_years, 
-            y = miles50, 
+            x = age_years,
+            y = miles50,
             group = vehicle
         ),
         color = color_cv
-    ) + 
-    facet_wrap(vars(vehicle)) + 
+    ) +
+    facet_wrap(vars(vehicle)) +
     scale_x_continuous(
-        breaks = seq(2, 9, 1), 
+        breaks = seq(2, 9, 1),
         limits = c(2, 9)
     ) +
     scale_y_continuous(
-        labels = scales::comma, 
-        breaks = seq(0, 125000, 25000) 
+        labels = scales::comma,
+        breaks = seq(0, 125000, 25000)
     ) +
     plot_theme()
 
@@ -53,51 +53,51 @@ quantiles %>%
 
 # Plot of bev, phev, and hybrid overlay over conventional ----
 
-quantiles_car <- quantiles %>% 
+quantiles_car <- quantiles %>%
     filter(vehicle_type == 'car')
-quantiles_conventional <- quantiles_car %>% 
+quantiles_conventional <- quantiles_car %>%
     filter(powertrain == 'conventional')
-quantiles_other <- quantiles_car %>% 
-    filter(powertrain != 'conventional') %>% 
-    arrange(powertrain) %>% 
+quantiles_other <- quantiles_car %>%
+    filter(powertrain != 'conventional') %>%
+    arrange(powertrain) %>%
     mutate(category = 'other')
 rep_length <- nrow(quantiles_conventional)
 quantiles_conventional <- quantiles_conventional[rep(1:rep_length, 3),]
 quantiles_conventional$powertrain <- rep(
     c('bev', 'hybrid', 'phev'), each = rep_length)
 quantiles_conventional$category <- 'conventional'
-df_fig1 <- rbind(quantiles_other, quantiles_conventional)
+df_fig1a <- rbind(quantiles_other, quantiles_conventional)
 
 # Save plot data for reproduction
-qsave(df_fig1, here::here('data', 'df_fig1.qs'))
+write_csv(df_fig1a, here::here('data', 'fig1a.csv'))
 
-fig1 <- df_fig1 %>%
-    set_powertrain_levels() %>% 
-    ggplot() +  
+fig1a <- df_fig1a %>%
+    set_powertrain_levels() %>%
+    ggplot() +
     geom_ribbon(
         aes(
-            x = age_years, 
-            ymin = miles25, 
-            ymax = miles75, 
+            x = age_years,
+            ymin = miles25,
+            ymax = miles75,
             fill = category
-        ), 
+        ),
         alpha = 0.25) +
     geom_line(
         aes(
             x = age_years,
             y = miles50,
-            color = category, 
+            color = category,
             group = category
         )
     ) +
-    facet_wrap(vars(powertrain_label)) + 
+    facet_wrap(vars(powertrain_label)) +
     scale_x_continuous(
-        breaks = seq(2, 9, 1), 
+        breaks = seq(2, 9, 1),
         limits = c(2, 9)
     ) +
     scale_y_continuous(
-        labels = scales::comma, 
-        breaks = seq(0, 125000, 25000) 
+        labels = scales::comma,
+        breaks = seq(0, 125000, 25000)
     ) +
     scale_fill_manual(values = c(color_cv, color_ev)) +
     scale_color_manual(values = c(
@@ -106,29 +106,29 @@ fig1 <- df_fig1 %>%
     ) +
     plot_theme() +
     labs(
-        x = "Vehicle age (years)", 
+        x = "Vehicle age (years)",
         y = 'Vehicle mileage'
-    ) + 
+    ) +
     geom_label(
         data = data.frame(
             x = rep(5, 6),
-            y = 10000*c(10, 1.2, 10, 2, 10, 2.5), 
+            y = 10000*c(10, 1.2, 10, 2, 10, 2.5),
             label = c(
-                'Conventional', 'BEV', 
-                'Conventional', 'PHEV', 
+                'Conventional', 'BEV',
+                'Conventional', 'PHEV',
                 'Conventional', 'Hybrid'
-            ), 
+            ),
             powertrain_label = as.factor(c(
-                rep('Battery Electric', 2), rep('Plug-in Hybrid', 2), 
+                rep('Battery Electric', 2), rep('Plug-in Hybrid', 2),
                 rep('Hybrid', 2))
             )
-        ), 
-        mapping = aes(x = x, y = y, label = label, color = label), 
-        size = 4, 
+        ),
+        mapping = aes(x = x, y = y, label = label, color = label),
+        size = 4,
         family = 'Roboto Condensed'
     )
 
-ggsave(here::here('figs', 'fig1.png'), fig1, width = 11, height = 3.5)
+ggsave(here::here('figs', 'fig1a.png'), fig1a, width = 11, height = 3.5)
 
 # FIG 1b ----
 
@@ -136,83 +136,81 @@ ggsave(here::here('figs', 'fig1.png'), fig1, width = 11, height = 3.5)
 
 # Read in quantile_bev data, quick formatting
 
-quantiles_bev <- read_parquet(here::here('data', 'quantiles_bev.parquet')) %>% 
+quantiles_bev <- read_parquet(here::here('data', 'quantiles_bev.parquet')) %>%
     mutate(
-        age_years = age_months / 12, 
-        powertrain = 'bev', 
+        age_years = age_months / 12,
+        powertrain = 'bev',
         vehicle_type = 'car',
-        vehicle = paste(powertrain, vehicle_type, sep = "_"), 
+        vehicle = paste(powertrain, vehicle_type, sep = "_"),
         category = 'other'
-    ) %>% 
+    ) %>%
     filter(between(age_years, AGE_YEARS_MIN, AGE_YEARS_MAX))
-
-df_fig1b <- df_fig1 %>%
-    filter(category == 'conventional' & powertrain == 'bev') %>% 
+df_fig1b <- df_fig1a %>%
+    filter(category == 'conventional' & powertrain == 'bev') %>%
     mutate(
-        tesla = 0, 
+        tesla = 0,
         powertrain = 'conventional'
-    ) %>% 
-    select(names(quantiles_bev)) %>% 
-    rbind(quantiles_bev) %>% 
+    ) %>%
+    select(names(quantiles_bev)) %>%
+    rbind(quantiles_bev) %>%
     mutate(
         vehicle = case_when(
             powertrain == 'bev' & tesla == 1 ~ 'Tesla BEV',
             powertrain == 'bev' & tesla == 0 ~ 'Non-Tesla BEV',
             TRUE ~ 'Conventional'
-    )) %>% 
-    ungroup()
+    ))
 
 # Save plot data for reproduction
-qsave(df_fig1b, here::here('data', 'df_fig1b.qs'))
+write_csv(df_fig1b, here::here('data', 'fig1b.csv'))
 
-fig1b <- df_fig1b %>% 
-    ggplot() +  
+fig1b <- df_fig1b %>%
+    ggplot() +
     geom_ribbon(
         aes(
-            x = age_years, 
-            ymin = miles25, 
-            ymax = miles75, 
+            x = age_years,
+            ymin = miles25,
+            ymax = miles75,
             fill = vehicle
-        ), 
+        ),
         alpha = 0.25) +
     geom_line(
         aes(
             x = age_years,
             y = miles50,
-            color = vehicle, 
+            color = vehicle,
             group = vehicle
         )
     ) +
     scale_y_continuous(
-        labels = scales::comma, 
-        breaks = seq(0, 125000, 25000) 
+        labels = scales::comma,
+        breaks = seq(0, 125000, 25000)
     ) +
     scale_fill_manual(values = c(color_cv, color_ev, color_tesla)) +
     scale_color_manual(values = c(color_cv, color_ev, color_tesla)) +
     plot_theme() +
     labs(
-        x = "Vehicle age (years)", 
+        x = "Vehicle age (years)",
         y = 'Vehicle mileage'
     ) +
     # Add labels
     geom_text(
         data = df_fig1b %>%
             filter(age_months == max(age_months)),
-        aes(            
+        aes(
             x = age_years,
             y = miles50,
-            label = vehicle, 
+            label = vehicle,
             color = vehicle
         ),
-        hjust = 0, nudge_x = 0.1, size = 4, 
+        hjust = 0, nudge_x = 0.1, size = 4,
         family = 'Roboto Condensed'
     ) +
     # Create space for labels on right side
     scale_x_continuous(
-        breaks = seq(2, 9, 1), 
+        breaks = seq(2, 9, 1),
         expand = expansion(add = c(0.5, 1.8))
     )
-        
+
 ggsave(here::here('figs', 'fig1b.png'), fig1b, width = 6, height = 4)
 
 
