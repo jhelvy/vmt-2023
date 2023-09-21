@@ -129,6 +129,10 @@ fig1a <- df_fig1a %>%
     )
 
 ggsave(here::here('figs', 'fig1a.png'), fig1a, width = 11, height = 3.5)
+ggsave(
+    here::here('figs', 'fig1a.pdf'),
+    fig1a, width = 11, height = 3.5,  device = cairo_pdf
+)
 
 # FIG 1b ----
 
@@ -212,6 +216,11 @@ fig1b <- df_fig1b %>%
     )
 
 ggsave(here::here('figs', 'fig1b.png'), fig1b, width = 6, height = 4)
+ggsave(
+    here::here('figs', 'fig1b.pdf'), fig1b, width = 6, height = 4,
+    device = cairo_pdf
+)
+
 
 
 
@@ -296,6 +305,10 @@ fig2a <- dt_car %>%
 
 tictoc::tic()
 ggsave(here::here('figs', 'fig2a.png'), fig2a, width = 12, height = 3)
+ggsave(
+    here::here('figs', 'fig2a.pdf'), fig2a, width = 12, height = 3
+    device = cairo_pdf
+)
 tictoc::toc()
 
 # Drop objects for space
@@ -385,6 +398,10 @@ fig2b <- dt_suv %>%
 
 tictoc::tic()
 ggsave(here::here('figs', 'fig2b.png'), fig2b, width = 12, height = 3)
+ggsave(
+    here::here('figs', 'fig2b.pdf'), fig2b, width = 12, height = 3,
+    device = cairo_pdf
+)
 tictoc::toc()
 
 # Drop objects for space
@@ -484,6 +501,10 @@ ggsave(
     here::here('figs', 'fig3.png'), fig3,
     width = 6, height = 3.2
 )
+ggsave(
+    here::here('figs', 'fig3.pdf'), fig3,
+    width = 6, height = 3.2, device = cairo_pdf
+)
 
 
 # Figure on non-linear range relationship with annual mileage -----
@@ -530,3 +551,7 @@ dt_bev_car %>%
     theme(legend.position = 'bottom')
 
 ggsave(here::here('figs', 'fig-non-linear-range.png'), width = 9, height = 5)
+ggsave(
+    here::here('figs', 'fig-non-linear-range.pdf'), width = 9, height = 5,
+    device = cairo_pdf
+)
