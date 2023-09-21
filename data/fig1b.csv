@@ -1,0 +1,256 @@
+age_months,tesla,miles25,miles50,miles75,age_years,powertrain,vehicle_type,vehicle,category
+24,0,17927.75,31797,41425,2,conventional,car,Conventional,conventional
+25,0,18476,32000,41718,2.0833333333333335,conventional,car,Conventional,conventional
+26,0,19421,32986,42398,2.1666666666666665,conventional,car,Conventional,conventional
+27,0,19330,32007,42325,2.25,conventional,car,Conventional,conventional
+28,0,19374,31003,41638,2.3333333333333335,conventional,car,Conventional,conventional
+29,0,19647,30781,41578,2.4166666666666665,conventional,car,Conventional,conventional
+30,0,19787,30422,41671,2.5,conventional,car,Conventional,conventional
+31,0,20038,30371,41837,2.5833333333333335,conventional,car,Conventional,conventional
+32,0,20480,30600,42200,2.6666666666666665,conventional,car,Conventional,conventional
+33,0,20944,30902,42411.25,2.75,conventional,car,Conventional,conventional
+34,0,21515,31332,42853,2.8333333333333335,conventional,car,Conventional,conventional
+35,0,21990.25,31518,42971,2.9166666666666665,conventional,car,Conventional,conventional
+36,0,22498,31903,43014.25,3,conventional,car,Conventional,conventional
+37,0,23170,32596,43997,3.0833333333333335,conventional,car,Conventional,conventional
+38,0,23669,32916,44361,3.1666666666666665,conventional,car,Conventional,conventional
+39,0,23717,32864,44274,3.25,conventional,car,Conventional,conventional
+40,0,23916,32910,43937,3.3333333333333335,conventional,car,Conventional,conventional
+41,0,24121,33175,44400,3.4166666666666665,conventional,car,Conventional,conventional
+42,0,24476,33511,45000,3.5,conventional,car,Conventional,conventional
+43,0,24875,34000,45867,3.5833333333333335,conventional,car,Conventional,conventional
+44,0,25340,34620,47157,3.6666666666666665,conventional,car,Conventional,conventional
+45,0,25866,35206,48627,3.75,conventional,car,Conventional,conventional
+46,0,26392,35926.5,50280,3.8333333333333335,conventional,car,Conventional,conventional
+47,0,27217,37000,52433,3.9166666666666665,conventional,car,Conventional,conventional
+48,0,28125,38760,55000,4,conventional,car,Conventional,conventional
+49,0,29748,41441,58687,4.083333333333333,conventional,car,Conventional,conventional
+50,0,30976,43684,61737,4.166666666666667,conventional,car,Conventional,conventional
+51,0,32002,45363,63444,4.25,conventional,car,Conventional,conventional
+52,0,33517.5,47602,65802,4.333333333333333,conventional,car,Conventional,conventional
+53,0,35189.25,49848.5,68075,4.416666666666667,conventional,car,Conventional,conventional
+54,0,36541,51582,70031.5,4.5,conventional,car,Conventional,conventional
+55,0,37974,53343,71686.5,4.583333333333333,conventional,car,Conventional,conventional
+56,0,39000,54755.5,73499.75,4.666666666666667,conventional,car,Conventional,conventional
+57,0,40111.25,56000,74692,4.75,conventional,car,Conventional,conventional
+58,0,40923.75,57020,75608,4.833333333333333,conventional,car,Conventional,conventional
+59,0,42119.5,58072,76995.5,4.916666666666667,conventional,car,Conventional,conventional
+60,0,42806.25,59140,78000,5,conventional,car,Conventional,conventional
+61,0,44550,60885,79612,5.083333333333333,conventional,car,Conventional,conventional
+62,0,45900,62734,81707.5,5.166666666666667,conventional,car,Conventional,conventional
+63,0,46050,62902.5,82042.25,5.25,conventional,car,Conventional,conventional
+64,0,47443,64228,83301.5,5.333333333333333,conventional,car,Conventional,conventional
+65,0,48500.25,65522,84553.5,5.416666666666667,conventional,car,Conventional,conventional
+66,0,49070,66384,85419,5.5,conventional,car,Conventional,conventional
+67,0,49621.5,67158,86307.5,5.583333333333333,conventional,car,Conventional,conventional
+68,0,49993.5,67819,87405.5,5.666666666666667,conventional,car,Conventional,conventional
+69,0,51014,68990,88363.5,5.75,conventional,car,Conventional,conventional
+70,0,51531,69584.5,89288,5.833333333333333,conventional,car,Conventional,conventional
+71,0,52120,70278,90164,5.916666666666667,conventional,car,Conventional,conventional
+72,0,52999,71122,90915,6,conventional,car,Conventional,conventional
+73,0,54004.5,72277,92081.5,6.083333333333333,conventional,car,Conventional,conventional
+74,0,55559,74072.5,93974,6.166666666666667,conventional,car,Conventional,conventional
+75,0,55751.25,74303.5,94386,6.25,conventional,car,Conventional,conventional
+76,0,57033.5,75422,95526,6.333333333333333,conventional,car,Conventional,conventional
+77,0,57554.25,76100,96280.5,6.416666666666667,conventional,car,Conventional,conventional
+78,0,57911.75,76820,96714.5,6.5,conventional,car,Conventional,conventional
+79,0,58235,77444,97211.75,6.583333333333333,conventional,car,Conventional,conventional
+80,0,58853.5,78075,98721.75,6.666666666666667,conventional,car,Conventional,conventional
+81,0,59759.5,79138,99357,6.75,conventional,car,Conventional,conventional
+82,0,60000,79753,100061.75,6.833333333333333,conventional,car,Conventional,conventional
+83,0,60496.75,80200.5,100781.25,6.916666666666667,conventional,car,Conventional,conventional
+84,0,61476,81067,101847,7,conventional,car,Conventional,conventional
+85,0,62670.5,82146,102601.5,7.083333333333333,conventional,car,Conventional,conventional
+86,0,63960,84000,104698.5,7.166666666666667,conventional,car,Conventional,conventional
+87,0,63857.75,84070.5,105564,7.25,conventional,car,Conventional,conventional
+88,0,65541.75,85350,106477.25,7.333333333333333,conventional,car,Conventional,conventional
+89,0,65787,85950,107263,7.416666666666667,conventional,car,Conventional,conventional
+90,0,65988,86105,107454.5,7.5,conventional,car,Conventional,conventional
+91,0,66333,87022.5,108644.25,7.583333333333333,conventional,car,Conventional,conventional
+92,0,67482,87901,109915,7.666666666666667,conventional,car,Conventional,conventional
+93,0,67844.5,88370,110054.5,7.75,conventional,car,Conventional,conventional
+94,0,67899.25,88737,110914,7.833333333333333,conventional,car,Conventional,conventional
+95,0,67777,88791,110980,7.916666666666667,conventional,car,Conventional,conventional
+96,0,68800,89729.5,111972,8,conventional,car,Conventional,conventional
+97,0,69748,90700,113048.25,8.083333333333334,conventional,car,Conventional,conventional
+98,0,71397.75,92144.5,114682,8.166666666666666,conventional,car,Conventional,conventional
+99,0,71023,92598.5,115779,8.25,conventional,car,Conventional,conventional
+100,0,72637.5,93899.5,116683,8.333333333333334,conventional,car,Conventional,conventional
+101,0,72954.75,94358,117309.25,8.416666666666666,conventional,car,Conventional,conventional
+102,0,73006,94451,117362,8.5,conventional,car,Conventional,conventional
+103,0,72840.75,94458.5,117952.25,8.583333333333334,conventional,car,Conventional,conventional
+104,0,73593.5,95354.5,118995.25,8.666666666666666,conventional,car,Conventional,conventional
+105,0,72828,95103,118284,8.75,conventional,car,Conventional,conventional
+106,0,73341,95919,119523,8.833333333333334,conventional,car,Conventional,conventional
+107,0,73330,95065,119427,8.916666666666666,conventional,car,Conventional,conventional
+108,0,74516,96838,120386,9,conventional,car,Conventional,conventional
+24,0,5631,10876,17494,2,bev,car,Non-Tesla BEV,other
+24,1,9984,14984,22380,2,bev,car,Tesla BEV,other
+25,0,7092,12277,19021,2.0833333333333335,bev,car,Non-Tesla BEV,other
+25,1,10833.5,16423,22942,2.0833333333333335,bev,car,Tesla BEV,other
+26,0,6843,11873,18636,2.1666666666666665,bev,car,Non-Tesla BEV,other
+26,1,12066.25,17898,25081,2.1666666666666665,bev,car,Tesla BEV,other
+27,0,6948,12214,18742,2.25,bev,car,Non-Tesla BEV,other
+27,1,11724,17632,25886,2.25,bev,car,Tesla BEV,other
+28,0,8799.5,14002,19907.5,2.3333333333333335,bev,car,Non-Tesla BEV,other
+28,1,11836.25,17527,23954.75,2.3333333333333335,bev,car,Tesla BEV,other
+29,0,8971,14517,20834.5,2.4166666666666665,bev,car,Non-Tesla BEV,other
+29,1,12074,17557,23674,2.4166666666666665,bev,car,Tesla BEV,other
+30,0,8694,14170,21131,2.5,bev,car,Non-Tesla BEV,other
+30,1,13370,19435,25581,2.5,bev,car,Tesla BEV,other
+31,0,9714.25,16011.5,22781.75,2.5833333333333335,bev,car,Non-Tesla BEV,other
+31,1,13241,19389,26608,2.5833333333333335,bev,car,Tesla BEV,other
+32,0,11139,17744,25060.5,2.6666666666666665,bev,car,Non-Tesla BEV,other
+32,1,13612.75,20477,27710,2.6666666666666665,bev,car,Tesla BEV,other
+33,0,12171.75,17836.5,24481.75,2.75,bev,car,Non-Tesla BEV,other
+33,1,14699,20618,28050,2.75,bev,car,Tesla BEV,other
+34,0,12607,18319,24994,2.8333333333333335,bev,car,Non-Tesla BEV,other
+34,1,16280,23070,31049,2.8333333333333335,bev,car,Tesla BEV,other
+35,0,13306,19179,25647,2.9166666666666665,bev,car,Non-Tesla BEV,other
+35,1,15814.5,22265,30946.25,2.9166666666666665,bev,car,Tesla BEV,other
+36,0,12988.5,18731,25002.25,3,bev,car,Non-Tesla BEV,other
+36,1,16444.75,22979.5,31634.25,3,bev,car,Tesla BEV,other
+37,0,13644,19549,26396,3.0833333333333335,bev,car,Non-Tesla BEV,other
+37,1,17563,24926,34753,3.0833333333333335,bev,car,Tesla BEV,other
+38,0,14300,20352,27307,3.1666666666666665,bev,car,Non-Tesla BEV,other
+38,1,18418,26341,35395,3.1666666666666665,bev,car,Tesla BEV,other
+39,0,15033.5,21059,28636,3.25,bev,car,Non-Tesla BEV,other
+39,1,19170,27349,36515,3.25,bev,car,Tesla BEV,other
+40,0,15324,21282,28929.75,3.3333333333333335,bev,car,Non-Tesla BEV,other
+40,1,21167.5,29328.5,37933.5,3.3333333333333335,bev,car,Tesla BEV,other
+41,0,15627,22111,29764.5,3.4166666666666665,bev,car,Non-Tesla BEV,other
+41,1,20084,28702,38865,3.4166666666666665,bev,car,Tesla BEV,other
+42,0,16106.75,22937,29942.75,3.5,bev,car,Non-Tesla BEV,other
+42,1,20802.5,28866.5,39540.25,3.5,bev,car,Tesla BEV,other
+43,0,16288,23085,29932,3.5833333333333335,bev,car,Non-Tesla BEV,other
+43,1,21564,30245,40374,3.5833333333333335,bev,car,Tesla BEV,other
+44,0,16729.5,23435,30572,3.6666666666666665,bev,car,Non-Tesla BEV,other
+44,1,22907.5,31979,41251.5,3.6666666666666665,bev,car,Tesla BEV,other
+45,0,17140.75,24126.5,31019.5,3.75,bev,car,Non-Tesla BEV,other
+45,1,23346,31854,41693.25,3.75,bev,car,Tesla BEV,other
+46,0,17185,24335.5,31109,3.8333333333333335,bev,car,Non-Tesla BEV,other
+46,1,23645.25,32486.5,41827.5,3.8333333333333335,bev,car,Tesla BEV,other
+47,0,17555.5,24826,31337.75,3.9166666666666665,bev,car,Non-Tesla BEV,other
+47,1,22984.25,32024,41554,3.9166666666666665,bev,car,Tesla BEV,other
+48,0,17529.75,24752.5,31941.5,4,bev,car,Non-Tesla BEV,other
+48,1,23587.25,31879,42369.75,4,bev,car,Tesla BEV,other
+49,0,17945.25,25207.5,32435,4.083333333333333,bev,car,Non-Tesla BEV,other
+49,1,23387,31945.5,42248,4.083333333333333,bev,car,Tesla BEV,other
+50,0,18362.5,25701,33111.5,4.166666666666667,bev,car,Non-Tesla BEV,other
+50,1,23583.5,32458,42975,4.166666666666667,bev,car,Tesla BEV,other
+51,0,19216,26767,34126,4.25,bev,car,Non-Tesla BEV,other
+51,1,25179.5,33139,43462.5,4.25,bev,car,Tesla BEV,other
+52,0,19534,26827.5,34426.25,4.333333333333333,bev,car,Non-Tesla BEV,other
+52,1,26157.5,33555,43573.5,4.333333333333333,bev,car,Tesla BEV,other
+53,0,19669.75,27329.5,35000,4.416666666666667,bev,car,Non-Tesla BEV,other
+53,1,26149,35610.5,46754.75,4.416666666666667,bev,car,Tesla BEV,other
+54,0,20560.5,27875,35466.5,4.5,bev,car,Non-Tesla BEV,other
+54,1,26376,35480,46360,4.5,bev,car,Tesla BEV,other
+55,0,20101,27732,35616.5,4.583333333333333,bev,car,Non-Tesla BEV,other
+55,1,26782,37844,51650,4.583333333333333,bev,car,Tesla BEV,other
+56,0,21509,29310,36613,4.666666666666667,bev,car,Non-Tesla BEV,other
+56,1,28497.25,39312,49783.25,4.666666666666667,bev,car,Tesla BEV,other
+57,0,21333,28483,37133.5,4.75,bev,car,Non-Tesla BEV,other
+57,1,30895.25,41287.5,52709,4.75,bev,car,Tesla BEV,other
+58,0,22480.5,30143.5,38520,4.833333333333333,bev,car,Non-Tesla BEV,other
+58,1,29750.5,40323.5,53654.5,4.833333333333333,bev,car,Tesla BEV,other
+59,0,23429.75,31737.5,40413.5,4.916666666666667,bev,car,Non-Tesla BEV,other
+59,1,29363.25,41892,54072.5,4.916666666666667,bev,car,Tesla BEV,other
+60,0,24329,31757,41742,5,bev,car,Non-Tesla BEV,other
+60,1,31643,43456,56013,5,bev,car,Tesla BEV,other
+61,0,24046,32642,42682.25,5.083333333333333,bev,car,Non-Tesla BEV,other
+61,1,29670,41119,52568,5.083333333333333,bev,car,Tesla BEV,other
+62,0,24980.75,33310,42916.75,5.166666666666667,bev,car,Non-Tesla BEV,other
+62,1,30281,41317,54335,5.166666666666667,bev,car,Tesla BEV,other
+63,0,25000,33429,41909.5,5.25,bev,car,Non-Tesla BEV,other
+63,1,33581,44837,57631,5.25,bev,car,Tesla BEV,other
+64,0,25688.25,34544.5,44532.75,5.333333333333333,bev,car,Non-Tesla BEV,other
+64,1,33282,44932.5,59701.5,5.333333333333333,bev,car,Tesla BEV,other
+65,0,25814,34649,44218,5.416666666666667,bev,car,Non-Tesla BEV,other
+65,1,33653,44686,59897,5.416666666666667,bev,car,Tesla BEV,other
+66,0,26523.5,34511,45009,5.5,bev,car,Non-Tesla BEV,other
+66,1,37175,49900,61989,5.5,bev,car,Tesla BEV,other
+67,0,28401,37726,46585,5.583333333333333,bev,car,Non-Tesla BEV,other
+67,1,34928.25,45782,58432.75,5.583333333333333,bev,car,Tesla BEV,other
+68,0,28680.25,36930,47058,5.666666666666667,bev,car,Non-Tesla BEV,other
+68,1,36117,48302,61939,5.666666666666667,bev,car,Tesla BEV,other
+69,0,29609,38211,46567,5.75,bev,car,Non-Tesla BEV,other
+69,1,40481.5,52369,65493.25,5.75,bev,car,Tesla BEV,other
+70,0,28225.75,37019,46998.75,5.833333333333333,bev,car,Non-Tesla BEV,other
+70,1,37692,50245,65593.5,5.833333333333333,bev,car,Tesla BEV,other
+71,0,29213,38621,48207.5,5.916666666666667,bev,car,Non-Tesla BEV,other
+71,1,38473.75,49800,65542.25,5.916666666666667,bev,car,Tesla BEV,other
+72,0,30457,39708,48170,6,bev,car,Non-Tesla BEV,other
+72,1,39093,50919,65270.5,6,bev,car,Tesla BEV,other
+73,0,30902.25,39991,50411,6.083333333333333,bev,car,Non-Tesla BEV,other
+73,1,39218.5,52058,69758.5,6.083333333333333,bev,car,Tesla BEV,other
+74,0,29821,39130,49370.75,6.166666666666667,bev,car,Non-Tesla BEV,other
+74,1,38576,52294,65656,6.166666666666667,bev,car,Tesla BEV,other
+75,0,32528,41322,52000,6.25,bev,car,Non-Tesla BEV,other
+75,1,39147.5,51348.5,66125.75,6.25,bev,car,Tesla BEV,other
+76,0,31781.5,41386.5,51414.75,6.333333333333333,bev,car,Non-Tesla BEV,other
+76,1,38951.25,52123.5,66734.5,6.333333333333333,bev,car,Tesla BEV,other
+77,0,32636,41470,52677,6.416666666666667,bev,car,Non-Tesla BEV,other
+77,1,38526,54942.5,70769.5,6.416666666666667,bev,car,Tesla BEV,other
+78,0,32363,41936,53415.25,6.5,bev,car,Non-Tesla BEV,other
+78,1,41153,54969,70584.5,6.5,bev,car,Tesla BEV,other
+79,0,31768.25,42127.5,52392,6.583333333333333,bev,car,Non-Tesla BEV,other
+79,1,42106,54889,70762,6.583333333333333,bev,car,Tesla BEV,other
+80,0,31418.5,42022,51843,6.666666666666667,bev,car,Non-Tesla BEV,other
+80,1,45164,60087,73637.5,6.666666666666667,bev,car,Tesla BEV,other
+81,0,32776.75,43680.5,55059.5,6.75,bev,car,Non-Tesla BEV,other
+81,1,40356,54838,70879,6.75,bev,car,Tesla BEV,other
+82,0,34119.25,43328.5,54045.25,6.833333333333333,bev,car,Non-Tesla BEV,other
+82,1,43669,58753,76115,6.833333333333333,bev,car,Tesla BEV,other
+83,0,33706.5,42913.5,54739.75,6.916666666666667,bev,car,Non-Tesla BEV,other
+83,1,44649.5,56786,73866.5,6.916666666666667,bev,car,Tesla BEV,other
+84,0,34101,43686,53539,7,bev,car,Non-Tesla BEV,other
+84,1,46714.75,59046,75932,7,bev,car,Tesla BEV,other
+85,0,35429.75,45803,57644,7.083333333333333,bev,car,Non-Tesla BEV,other
+85,1,44576,57705,74139,7.083333333333333,bev,car,Tesla BEV,other
+86,0,36339,45872,58441.5,7.166666666666667,bev,car,Non-Tesla BEV,other
+86,1,46068.5,58633.5,73445.25,7.166666666666667,bev,car,Tesla BEV,other
+87,0,35289.25,45512,56021.75,7.25,bev,car,Non-Tesla BEV,other
+87,1,46195.5,60169,73807.5,7.25,bev,car,Tesla BEV,other
+88,0,35034.25,46076.5,57656.25,7.333333333333333,bev,car,Non-Tesla BEV,other
+88,1,47040,59379,75960,7.333333333333333,bev,car,Tesla BEV,other
+89,0,35996.75,47880.5,58616.25,7.416666666666667,bev,car,Non-Tesla BEV,other
+89,1,46071,61144,75831,7.416666666666667,bev,car,Tesla BEV,other
+90,0,36923.5,45860.5,55988,7.5,bev,car,Non-Tesla BEV,other
+90,1,46913,62317,77397,7.5,bev,car,Tesla BEV,other
+91,0,36748.5,48100,61792.5,7.583333333333333,bev,car,Non-Tesla BEV,other
+91,1,46538,62090,79230.5,7.583333333333333,bev,car,Tesla BEV,other
+92,0,36394.5,47563,59034.5,7.666666666666667,bev,car,Non-Tesla BEV,other
+92,1,48984,66585,80750.5,7.666666666666667,bev,car,Tesla BEV,other
+93,0,36878.5,48505.5,59287,7.75,bev,car,Non-Tesla BEV,other
+93,1,45692.75,62470,82982.25,7.75,bev,car,Tesla BEV,other
+94,0,38733.5,47536.5,60812.75,7.833333333333333,bev,car,Non-Tesla BEV,other
+94,1,51027,67178.5,84972.5,7.833333333333333,bev,car,Tesla BEV,other
+95,0,40873,51655,61633,7.916666666666667,bev,car,Non-Tesla BEV,other
+95,1,53672,67561.5,85592,7.916666666666667,bev,car,Tesla BEV,other
+96,0,39054,48580,58350,8,bev,car,Non-Tesla BEV,other
+96,1,50051.5,70086.5,84649.75,8,bev,car,Tesla BEV,other
+97,0,38742,47094.5,59114,8.083333333333334,bev,car,Non-Tesla BEV,other
+97,1,50216,65936,87720,8.083333333333334,bev,car,Tesla BEV,other
+98,0,40478.5,50958,61422,8.166666666666666,bev,car,Non-Tesla BEV,other
+98,1,51985,69612,90497.5,8.166666666666666,bev,car,Tesla BEV,other
+99,0,36124.75,49190.5,62728.5,8.25,bev,car,Non-Tesla BEV,other
+99,1,48387,62209,80658.5,8.25,bev,car,Tesla BEV,other
+100,0,40116.5,49333.5,61516,8.333333333333334,bev,car,Non-Tesla BEV,other
+100,1,51288.5,68577,87272.5,8.333333333333334,bev,car,Tesla BEV,other
+101,0,41072,50020,60457,8.416666666666666,bev,car,Non-Tesla BEV,other
+101,1,55928.5,69970,85824.5,8.416666666666666,bev,car,Tesla BEV,other
+102,0,38000,51059,61332,8.5,bev,car,Non-Tesla BEV,other
+102,1,48451,63313,82146,8.5,bev,car,Tesla BEV,other
+103,0,39216.5,48984,58807.5,8.583333333333334,bev,car,Non-Tesla BEV,other
+103,1,58434.5,69726,99569,8.583333333333334,bev,car,Tesla BEV,other
+104,0,41449,53548,68000,8.666666666666666,bev,car,Non-Tesla BEV,other
+104,1,53695,74021,98323,8.666666666666666,bev,car,Tesla BEV,other
+105,0,40500.5,51485,60877.5,8.75,bev,car,Non-Tesla BEV,other
+105,1,59353,76283,96573.5,8.75,bev,car,Tesla BEV,other
+106,0,44180.25,54604.5,65771.5,8.833333333333334,bev,car,Non-Tesla BEV,other
+106,1,55036,76150,92935,8.833333333333334,bev,car,Tesla BEV,other
+107,0,41207,50136,62505,8.916666666666666,bev,car,Non-Tesla BEV,other
+107,1,61419,74987,88919,8.916666666666666,bev,car,Tesla BEV,other
+108,0,42387,50892,61190.75,9,bev,car,Non-Tesla BEV,other
+108,1,59255,76229.5,93187.25,9,bev,car,Tesla BEV,other
