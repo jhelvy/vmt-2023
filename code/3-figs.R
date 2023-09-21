@@ -71,6 +71,10 @@ df_fig1a <- rbind(quantiles_other, quantiles_conventional)
 # Save plot data for reproduction
 write_csv(df_fig1a, here::here('data', 'fig1a.csv'))
 
+# Make figure
+
+df_fig1a <- read_csv(here::here('data', 'fig1a.csv'))
+
 fig1a <- df_fig1a %>%
     set_powertrain_levels() %>%
     ggplot() +
@@ -166,6 +170,9 @@ df_fig1b <- df_fig1a %>%
 
 # Save plot data for reproduction
 write_csv(df_fig1b, here::here('data', 'fig1b.csv'))
+
+# Make figure 
+df_fig1b <- read_csv(here::here('data', 'fig1b.csv'))
 
 fig1b <- df_fig1b %>%
     ggplot() +
