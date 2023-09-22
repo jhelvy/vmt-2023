@@ -1,5 +1,4 @@
 \begin{table}[H]
-\caption{Model coefficients from linear models of vehicle mileage versus age with powertrain interactions. Mileage is in units of 1,000 miles.}
 \vspace{-20pt}
 \begin{center}
 \begin{tabular}{p{3cm} D{.}{.}{1.1} D{.}{.}{1.1} | D{.}{.}{1.1} D{.}{.}{1.1}}
@@ -42,6 +41,7 @@ R$^2$ & 0.405        & 0.406        & 0.480        & 0.480        \\
 \bottomrule
 \multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
 \end{tabular}
+\caption{Model coefficients from linear models of vehicle mileage versus age with powertrain interactions. Mileage is in units of 1,000 miles.}
 \label{table:reg_pooled_powertrain_cars}
 \end{center}
 \end{table}

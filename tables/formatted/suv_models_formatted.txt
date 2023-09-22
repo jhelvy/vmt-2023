@@ -1,5 +1,5 @@
 \begin{longtable}[t]{p{1.5cm}p{1.5cm}p{1.5cm}p{2cm}p{1.5cm}p{1.5cm}}
-\caption{Counts of SUV model listings included in analyses.}\\
+\caption{Counts of SUV model listings included in analyses. The small cumulative percentage for BEVs is due to the fact that the majority of the BEV SUVs in the sample were less than two years old and were thus not included in the estimated models, which were restricted to ages 2 to 9.}\\
 \toprule
 Powertrain & Make & Model & Count & Percent & Cumulative\\
  &  &  &  &  & Percent\\
