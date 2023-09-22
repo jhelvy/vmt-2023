@@ -213,5 +213,5 @@ dt <- read_parquet(PATH_DB) %>%
         cents_per_mile
     )
 
-write_parquet(dt, here::here('data', 'db.parquet'))
+write_parquet(dt, here::here('data', 'db-sample.parquet'))
 
