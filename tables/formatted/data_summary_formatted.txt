@@ -33,7 +33,7 @@
 
 \emph{Vehicle listings} & 11,333,997 & 44,190 & 0 & 1,732 & 11,511\\
 
-\emph{Vehicle models} & 35 & 8 & -- & 1 & 1 \\
+\emph{Vehicle models} & 35 & 8 & -- & 1 & 2 \\
 
 \multicolumn{2}{l}{\emph{Miles (1,000)}} \\
 ~~ mean & 51 & 46 & -- & 13 & 33\\
