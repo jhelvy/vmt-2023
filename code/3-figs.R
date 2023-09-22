@@ -559,8 +559,11 @@ dt_bev_car %>%
     ) +
     theme(legend.position = 'bottom')
 
-ggsave(here::here('figs', 'fig-non-linear-range.png'), width = 9, height = 5)
 ggsave(
-    here::here('figs', 'fig-non-linear-range.pdf'), width = 9, height = 5,
-    device = cairo_pdf
+    here::here('figs', 'fig-non-linear-range.png'), 
+    width = 9, height = 5
+)
+ggsave(
+    here::here('figs', 'fig-non-linear-range.pdf'), 
+    width = 9, height = 5, device = cairo_pdf
 )
