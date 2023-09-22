@@ -7,9 +7,9 @@
 \midrule
 \multicolumn{6}{l}{\textbf{Cars}} \\
 
-\emph{Vehicle listings} & 12,059,234 & 562,747 & 130,025 & 118,580 & 57,193\\
+\emph{Vehicle listings} & 11,643,966 & 562,747 & 128,850 & 118,911 & 57,193\\
 
-\emph{Vehicle models} & 29  & 15 & 8 & 9 & 2\\
+\emph{Vehicle models} & 25 & 15 & 7 & 10 & 2\\
 
 \multicolumn{2}{l}{\emph{Miles (1,000)}} \\
 ~~ mean & 51 & 54 & 43 & 27 & 36\\
@@ -20,37 +20,37 @@
 ~~ sd & 1.7 & 1.7 & 1.4 & 1.4 & 1.5\\
 
 \multicolumn{2}{l}{\emph{Price (\$USD)}} \\
-~~ mean & 16,177 & 15,943 & 19,315 & 14,658 & 50,181\\
-~~ sd & 6,832 & 4,932 & 12,767 & 6,053 & 12,380\\
+~~ mean & 16,205 & 15,943 & 19,311 & 15,025 & 50,181\\
+~~ sd & 6,814 & 4,932 & 12,820 & 9,287 & 12,380\\
 
 \multicolumn{2}{l}{\emph{Electric Range (miles)}} \\
 ~~ mean & -- & -- & 32 & 104 & 251\\
-~~ sd & -- & -- & 14 & 48 & 50\\
+~~ sd & -- & -- & 14 & 49 & 50\\
 ~~ min & -- & -- & 11 & 58 & 139\\
 ~~ max & -- & -- & 53 & 259 & 402\\
 \midrule
 \multicolumn{6}{l}{\textbf{SUVs}} \\
 
-\emph{Vehicle listings} & 11,870,521 & 43,223 & 0 & 1,765 & 10,858\\
+\emph{Vehicle listings} & 11,333,997 & 44,190 & 0 & 1,732 & 11,511\\
 
-\emph{Vehicle models} & 40 & 7 & -- & 1 & 1 \\
+\emph{Vehicle models} & 35 & 8 & -- & 1 & 1 \\
 
 \multicolumn{2}{l}{\emph{Miles (1,000)}} \\
-~~ mean & 51 & 46 & -- & 12 & 34\\
+~~ mean & 51 & 46 & -- & 13 & 33\\
 ~~  sd & 31 & 28 & -- & 9 & 18\\
 
 \multicolumn{2}{l}{\emph{Age (years)}} \\
-~~ mean & 4.2 & 4.1 & -- & 2.7 & 3.9\\
+~~ mean & 4.2 & 4.1 & -- & 2.7 & 3.8\\
 ~~ sd & 1.6 & 1.6 & -- & 0.4 & 1\\
 \multicolumn{2}{l}{\emph{Price (\$USD)}} \\
-~~ mean & 22,217 & 28,940 & -- & 61,973 & 72,061\\
-~~ sd &  8,816 & 10,317 & -- & 6,702 & 14,405\\
+~~ mean & 21,413 & 29,049 & -- & 61,779 & 71,613\\
+~~ sd &  7,788 & 10,248 & -- & 6,576 & 14,135\\
 
 \multicolumn{2}{l}{\emph{Electric Range (miles)}} \\
-~~ mean & -- & -- & -- & 204 & 262\\
-~~ sd & -- & -- & -- & 2 & 27\\
+~~ mean & -- & -- & -- & 204 & 266\\
+~~ sd & -- & -- & -- & 0 & 31\\
 ~~ min & -- & -- & -- & 204 & 200\\
-~~ max & -- & -- & -- & 218 & 371\\
+~~ max & -- & -- & -- & 204 & 371\\
 \bottomrule
 \end{tabular}
 \caption{Summary statistics of used car and SUV listings.}

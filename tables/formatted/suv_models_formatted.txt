@@ -17,7 +17,9 @@ Powertrain & Make & Model & Count & Percent & Cumulative\\
 \endlastfoot
  & Tesla & Model X & 16,246 & 0.194 & 0.194\\
 \nopagebreak
-\multirow{-2}{*}{\raggedright\arraybackslash BEV} & Audi & e-tron & 10,826 & 0.129 & 0.323\\
+ & Audi & e-tron & 10,826 & 0.129 & 0.323\\
+\nopagebreak
+\multirow{-3}{*}{\raggedright\arraybackslash BEV} & Tesla & Model Y & 5,261 & 0.063 & 0.704\\
 \cmidrule{1-6}\pagebreak[0]
  & Toyota & RAV4 & 47,039 & 0.240 & 0.240\\
 \nopagebreak
@@ -31,7 +33,9 @@ Powertrain & Make & Model & Count & Percent & Cumulative\\
 \nopagebreak
  & Subaru & XV Crosstrek & 6,005 & 0.031 & 0.832\\
 \nopagebreak
-\multirow{-7}{*}{\raggedright\arraybackslash HYBRID} & Porsche & Cayenne & 4,538 & 0.023 & 0.855\\
+ & Porsche & Cayenne & 4,538 & 0.023 & 0.855\\
+\nopagebreak
+\multirow{-8}{*}{\raggedright\arraybackslash HYBRID} & Lexus & NX & 3,904 & 0.020 & 0.875\\
 \cmidrule{1-6}\pagebreak[0]
  & Honda & CR-V & 1,706,212 & 0.049 & 0.049\\
 \nopagebreak
