@@ -253,7 +253,7 @@ effects_2a <- count(dt_car, powertrain) %>%
         x1$coefs['age_years'],
         sum(x1$coefs[c('age_years', 'age_years:powertrainhybrid')]),
         sum(x1$coefs[c('age_years', 'age_years:powertrainphev')]),
-        sum(x1$coefs[c('age_years', 'age_years:powertrainbev')]),
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev_non_tesla')]),
         sum(x1$coefs[c('age_years', 'age_years:powertrainbev_tesla')])
     )) %>%
     set_powertrain_levels_tesla() %>%
@@ -343,7 +343,7 @@ effects_2b <- count(dt_suv, powertrain) %>%
     mutate(slope = c(
         x1$coefs['age_years'],
         sum(x1$coefs[c('age_years', 'age_years:powertrainhybrid')]),
-        sum(x1$coefs[c('age_years', 'age_years:powertrainbev')]),
+        sum(x1$coefs[c('age_years', 'age_years:powertrainbev_non_tesla')]),
         sum(x1$coefs[c('age_years', 'age_years:powertrainbev_tesla')]),
         0
     )) %>%
