@@ -313,7 +313,7 @@ fig2a <- dt_car %>%
 tictoc::tic()
 ggsave(here::here('figs', 'fig2a.png'), fig2a, width = 12, height = 3)
 ggsave(
-    here::here('figs', 'fig2a.pdf'), fig2a, width = 12, height = 3
+    here::here('figs', 'fig2a.pdf'), fig2a, width = 12, height = 3,
     device = cairo_pdf
 )
 tictoc::toc()
@@ -404,7 +404,9 @@ fig2b <- dt_suv %>%
     )
 
 tictoc::tic()
-ggsave(here::here('figs', 'fig2b.png'), fig2b, width = 12, height = 3)
+ggsave(
+    here::here('figs', 'fig2b.png'), fig2b, width = 12, height = 3
+)
 ggsave(
     here::here('figs', 'fig2b.pdf'), fig2b, width = 12, height = 3,
     device = cairo_pdf
