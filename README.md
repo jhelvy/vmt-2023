@@ -1,3 +1,8 @@
+
+You can use this DOI to cite this repository:
+
+[![DOI](https://zenodo.org/badge/656871821.svg)](https://zenodo.org/badge/latestdoi/656871821)
+
 Replication materials for study comparing CV and PEV mileage
 
 All code to replicate results are in the "code" folder.
