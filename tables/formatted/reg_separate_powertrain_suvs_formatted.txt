@@ -7,37 +7,35 @@
  \multicolumn{1}{r}{Powertrain:} & \multicolumn{1}{c}{Model 4a} & \multicolumn{1}{c}{Model 4b} & \multicolumn{1}{c}{Model 4c} \\
   & \multicolumn{1}{c}{BEV} & \multicolumn{1}{c}{Hybrid} &  \multicolumn{1}{c}{Conventional} \\
 \midrule
-age\_years                         & 12.388^{***} & 12.735^{***}  & 16.442^{***}  \\
-                                   & (1.873)      & (0.992)       & (0.047)       \\
+age\_years                         & 12.104^{***} & 12.867^{***}  & 16.644^{***}  \\
+                                   & (1.885)      & (0.979)       & (0.049)       \\
 \midrule
 \multicolumn{4}{l}{\emph{Operating cost and range interactions with age\_years}} \\
-cents\_per\_mile        & -0.373^{***} & -0.249^{***}  & -0.265^{***}  \\
-                                   & (0.102)      & (0.073)       & (0.003)       \\
-range                   & -0.006       &               &               \\
+cents\_per\_mile        & -0.343^{***} & -0.257^{***}  & -0.279^{***}  \\
+                                   & (0.095)      & (0.072)       & (0.003)       \\
+range                   & -0.005       &               &               \\
                                    & (0.008)      &               &               \\
 \midrule
 \multicolumn{4}{l}{\emph{Select model interactions with age\_years}} \\
 \emph{Reference} & \multicolumn{1}{c}{\emph{Audi}} & \multicolumn{1}{c}{\emph{Porsche}} & \multicolumn{1}{c}{\emph{Toyota}} \\
 \emph{level:} & \multicolumn{1}{c}{\emph{e-tron}} & \multicolumn{1}{c}{\emph{Cayenne}} & \multicolumn{1}{c}{\emph{4runner}} \\
-model x            & 0.473        &               &               \\
-                                   & (1.000)      &               &               \\
-escape             &              & -7.539^{***}  & -1.139^{***}  \\
-                                   &              & (0.657)       & (0.030)       \\
-highlander         &              & 2.738^{***}   & -0.309^{***}  \\
-                                   &              & (0.403)       & (0.033)       \\
-rav4               &              & -1.498^{*}    & -2.312^{***}  \\
-                                   &              & (0.635)       & (0.031)       \\
-expedition         &              &               & 2.091^{***}   \\
+model x            & 0.477        &               &               \\
+                                   & (0.988)      &               &               \\
+model y            & 4.926        &               &               \\
+                                   & (9.001)      &               &               \\
+escape             &              & -7.588^{***}  & -1.188^{***}  \\
+                                   &              & (0.651)       & (0.030)       \\
+highlander         &              & 2.705^{***}   & -0.328^{***}  \\
+                                   &              & (0.399)       & (0.033)       \\
+rav4                          &              & 4.450         & 1.847^{***}   \\
+                                   &              & (2.447)       & (0.146)       \\
+expedition         &              &               & 2.096^{***}   \\
                                    &              &               & (0.058)       \\
-nx                 &              &               & -4.079^{***}  \\
-                                   &              &               & (0.073)       \\
-wrangler           &              &               & -3.485^{***}  \\
-                                   &              &               & (0.038)       \\
-yukon              &              &               & 1.176^{***}   \\
-                                   &              &               & (0.053)       \\
+wrangler           &              &               & -3.475^{***}  \\
+                                   &              &               & (0.039)       \\
 \midrule
-Num. obs.                   & \multicolumn{1}{c}{12,623}        & \multicolumn{1}{c}{43,223}         & \multicolumn{1}{c}{11,870,521}       \\
-R$^2$                & 0.371        & 0.490         & 0.518         \\
+Num. obs.                   & \multicolumn{1}{c}{13,243}        & \multicolumn{1}{c}{44,190}         & \multicolumn{1}{c}{11,333,997}       \\
+R$^2$                & 0.376        & 0.492         & 0.519         \\
 \bottomrule
 \multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
 \end{tabular}
