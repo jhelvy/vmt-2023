@@ -1,6 +1,6 @@
 Files:
 
-- db.parquet
+- db-sample.parquet
 
 Description:
 
