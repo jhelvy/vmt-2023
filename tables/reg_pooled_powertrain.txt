@@ -1,0 +1,47 @@
+
+\usepackage{booktabs}
+\usepackage{dcolumn}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{8.6} D{.}{.}{8.6} D{.}{.}{8.6} D{.}{.}{8.6}}
+\toprule
+ & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} & \multicolumn{1}{c}{Model 3} & \multicolumn{1}{c}{Model 4} \\
+\midrule
+(Intercept)                          & 0.635^{***}  & 0.635^{***}  & -3.926^{***} & -3.926^{***} \\
+                                     & (0.019)      & (0.019)      & (0.018)      & (0.018)      \\
+age\_years                           & 11.642^{***} & 11.642^{***} & 12.945^{***} & 12.945^{***} \\
+                                     & (0.004)      & (0.004)      & (0.004)      & (0.004)      \\
+powertrainhybrid                     & -0.043       & -0.043       & 0.746^{*}    & 0.746^{*}    \\
+                                     & (0.093)      & (0.093)      & (0.297)      & (0.297)      \\
+powertrainphev                       & -3.994^{***} & -3.994^{***} &              &              \\
+                                     & (0.202)      & (0.202)      &              &              \\
+powertrainbev                        & -0.221       & 0.858^{***}  & -5.030^{***} &              \\
+                                     & (0.177)      & (0.219)      & (0.761)      &              \\
+age\_years:powertrainhybrid          & 0.299^{***}  & 0.299^{***}  & -0.853^{***} & -0.853^{***} \\
+                                     & (0.019)      & (0.019)      & (0.068)      & (0.068)      \\
+age\_years:powertrainphev            & -0.525^{***} & -0.525^{***} &              &              \\
+                                     & (0.046)      & (0.046)      &              &              \\
+age\_years:powertrainbev             & -4.477^{***} & -5.407^{***} & -2.358^{***} &              \\
+                                     & (0.040)      & (0.050)      & (0.196)      &              \\
+powertrainbev\_tesla                 &              & -1.210^{***} &              & 1.803^{*}    \\
+                                     &              & (0.299)      &              & (0.889)      \\
+age\_years:powertrainbev\_tesla      &              & -2.856^{***} &              & -3.809^{***} \\
+                                     &              & (0.068)      &              & (0.220)      \\
+powertrainbev\_non\_tesla            &              &              &              & -6.279       \\
+                                     &              &              &              & (3.573)      \\
+age\_years:powertrainbev\_non\_tesla &              &              &              & -4.482^{***} \\
+                                     &              &              &              & (1.317)      \\
+\midrule
+Num. obs.                            & 12928584     & 12928584     & 11926367     & 11926367     \\
+R$^2$ (full model)                   & 0.406        & 0.406        & 0.477        & 0.477        \\
+R$^2$ (proj model)                   &              &              &              &              \\
+Adj. R$^2$ (full model)              & 0.406        & 0.406        & 0.477        & 0.477        \\
+Adj. R$^2$ (proj model)              &              &              &              &              \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\caption{Statistical models}
+\label{table:coefficients}
+\end{center}
+\end{table}

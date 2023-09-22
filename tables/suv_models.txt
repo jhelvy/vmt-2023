@@ -1,0 +1,104 @@
+
+\begin{longtable}[t]{llllrr}
+\caption{Counts of SUV model listings included in analysis.}\\
+\toprule
+powertrain & make & model & n & p & cumsum\\
+\midrule
+\endfirsthead
+\caption[]{Counts of SUV model listings included in analysis. \textit{(continued)}}\\
+\toprule
+powertrain & make & model & n & p & cumsum\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+ & Tesla & Model X & 16,246 & 0.194 & 0.194\\
+\nopagebreak
+\multirow{-2}{*}{\raggedright\arraybackslash BEV} & Audi & e-tron & 10,826 & 0.129 & 0.323\\
+\cmidrule{1-6}\pagebreak[0]
+ & Toyota & RAV4 & 47,039 & 0.240 & 0.240\\
+\nopagebreak
+ & Lexus & RX & 38,518 & 0.197 & 0.437\\
+\nopagebreak
+ & Toyota & Highlander & 28,462 & 0.145 & 0.582\\
+\nopagebreak
+ & Ford & Escape & 9,165 & 0.047 & 0.683\\
+\nopagebreak
+ & BMW & X5 & 6,238 & 0.032 & 0.801\\
+\nopagebreak
+ & Subaru & XV Crosstrek & 6,005 & 0.031 & 0.832\\
+\nopagebreak
+\multirow{-7}{*}{\raggedright\arraybackslash HYBRID} & Porsche & Cayenne & 4,538 & 0.023 & 0.855\\
+\cmidrule{1-6}\pagebreak[0]
+ & Honda & CR-V & 1,706,212 & 0.049 & 0.049\\
+\nopagebreak
+ & Toyota & RAV4 & 1,507,128 & 0.043 & 0.092\\
+\nopagebreak
+ & Ford & Escape & 1,488,216 & 0.043 & 0.135\\
+\nopagebreak
+ & Nissan & Rogue & 1,073,001 & 0.031 & 0.166\\
+\nopagebreak
+ & Chevrolet & Equinox & 930,195 & 0.027 & 0.192\\
+\nopagebreak
+ & Jeep & Grand Cherokee & 927,907 & 0.027 & 0.219\\
+\nopagebreak
+ & Toyota & Highlander & 882,930 & 0.025 & 0.244\\
+\nopagebreak
+ & Jeep & Cherokee & 877,204 & 0.025 & 0.269\\
+\nopagebreak
+ & Chevrolet & Traverse & 823,064 & 0.024 & 0.293\\
+\nopagebreak
+ & Jeep & Wrangler Unlimited & 799,060 & 0.023 & 0.316\\
+\nopagebreak
+ & Honda & Pilot & 777,143 & 0.022 & 0.338\\
+\nopagebreak
+ & Ford & Explorer & 755,941 & 0.022 & 0.360\\
+\nopagebreak
+ & KIA & Sorento & 641,640 & 0.018 & 0.378\\
+\nopagebreak
+ & Toyota & 4runner & 641,617 & 0.018 & 0.396\\
+\nopagebreak
+ & Ford & Edge & 630,817 & 0.018 & 0.415\\
+\nopagebreak
+ & Lexus & RX & 605,245 & 0.017 & 0.432\\
+\nopagebreak
+ & Subaru & Forester & 587,590 & 0.017 & 0.449\\
+\nopagebreak
+ & Hyundai & Tucson & 580,673 & 0.017 & 0.465\\
+\nopagebreak
+ & Hyundai & Santa Fe & 577,097 & 0.017 & 0.482\\
+\nopagebreak
+ & Jeep & Compass & 566,082 & 0.016 & 0.498\\
+\nopagebreak
+ & Gmc & Acadia & 529,328 & 0.015 & 0.513\\
+\nopagebreak
+ & Nissan & Pathfinder & 480,441 & 0.014 & 0.527\\
+\nopagebreak
+ & KIA & Sportage & 416,946 & 0.012 & 0.539\\
+\nopagebreak
+ & Buick & Enclave & 406,382 & 0.012 & 0.551\\
+\nopagebreak
+ & Mazda & CX-5 & 395,472 & 0.011 & 0.562\\
+\nopagebreak
+ & Dodge & Journey & 382,336 & 0.011 & 0.573\\
+\nopagebreak
+ & Volkswagen & Tiguan & 382,204 & 0.011 & 0.584\\
+\nopagebreak
+ & Gmc & Terrain & 372,629 & 0.011 & 0.595\\
+\nopagebreak
+ & Acura & MDX & 371,089 & 0.011 & 0.605\\
+\nopagebreak
+ & Chevrolet & Trax & 361,101 & 0.010 & 0.616\\
+\nopagebreak
+ & Buick & Encore & 361,083 & 0.010 & 0.626\\
+\nopagebreak
+ & Nissan & Murano & 360,982 & 0.010 & 0.636\\
+\nopagebreak
+ & Jeep & Patriot & 359,392 & 0.010 & 0.647\\
+\nopagebreak
+ & Ford & Expedition & 355,704 & 0.010 & 0.657\\
+\nopagebreak
+\multirow{-35}{*}{\raggedright\arraybackslash CONVENTIONAL} & Jeep & Wrangler & 350,373 & 0.010 & 0.667\\*
+\end{longtable}

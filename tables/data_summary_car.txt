@@ -1,0 +1,33 @@
+\begin{table}
+\centering
+\begin{tabular}[t]{llllll}
+\toprule
+  & Conventional & Hybrid & PHEV & bev & bev\_tesla\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Number of Listings}}\\
+\hspace{1em}n & 12059234 & 562747 & 130025 & 118580 & 57193\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Number of Models}}\\
+\hspace{1em}models & 29 & 15 & 8 & 9 & 2\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Miles (1,000)}}\\
+\hspace{1em}mean & 51 & 54 & 43 & 27 & 36\\
+\hspace{1em}sd & 31 & 33 & 25 & 15 & 21\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Age (years)}}\\
+\hspace{1em}mean & 4.3 & 4.5 & 4.1 & 4.2 & 4.2\\
+\hspace{1em}sd & 1.7 & 1.7 & 1.4 & 1.4 & 1.5\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Price (\$USD)}}\\
+\hspace{1em}mean & 16177 & 15943 & 19315 & 14658 & 50181\\
+\hspace{1em}sd & 6832 & 4932 & 12767 & 6053 & 12380\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Electric Range (miles)}}\\
+\hspace{1em}mean &  &  & 32 & 104 & 251\\
+\hspace{1em}sd &  &  & 14 & 48 & 50\\
+\hspace{1em}min &  &  & 11 & 58 & 139\\
+\hspace{1em}max &  &  & 53 & 259 & 402\\
+\bottomrule
+\end{tabular}
+\end{table}
