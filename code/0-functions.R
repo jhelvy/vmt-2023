@@ -305,14 +305,6 @@ common_cleaning <- function(dt) {
     # Set common reference levels for factor variables
     dt <- set_reference_levels(dt)
 
-    # Remove small n cars
-    dt <- dt %>%
-        group_by(powertrain, make, model) %>%
-        mutate(n = n()) %>%
-        filter(n >= 1000) %>%
-        select(-n) %>%
-        ungroup()
-
     return(dt)
 }
 
@@ -338,4 +330,39 @@ set_reference_levels <- function(dt) {
     
     return(dt)
 
+}
+
+compute_fuel_cost <- function(dt) {
+    
+    # Join range, mpg, and motor efficiencies 
+    
+    dt <- dt %>% 
+        left_join(read_parquet(here::here('data', 'dict_final.parquet')), by = c(
+            'powertrain', 'vehicle_type', 'year', 'make', 'model', 
+            'trim')
+        )
+    
+    # Compute cents_per_mile
+    
+    dt <- dt %>% 
+        mutate(
+            cents_per_mile = 100 * gas_price / mpg, 
+            cents_per_mile = ifelse(
+                powertrain == 'phev',
+                phev_uf*((elec_price*kwhp100mi / 100) + (gas_price*gal100mi / 100)) + 
+                    (1 - phev_uf)*cents_per_mile,
+                cents_per_mile
+            ),
+            cents_per_mile = ifelse(
+                powertrain == 'bev', 
+                elec_price*kwhp100mi / 100, 
+                cents_per_mile
+            )
+        ) %>% 
+        filter(!is.na(cents_per_mile)) %>% 
+        filter(cents_per_mile != Inf) %>%
+        select(-kwhp100mi, -gal100mi, -phev_uf)
+    
+    return(dt)
+    
 }

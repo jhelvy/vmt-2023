@@ -151,11 +151,30 @@ dt <- merge(
 
 # Fuel Economy ----
 
-dt <- compute_fuel_cost(dt, paths)
+dt <- compute_fuel_cost(dt)
 
 # Final fixes
 
-dt <- final_fixes(dt)
+# Remove small n cars
+dt <- dt %>%
+    group_by(powertrain, vehicle_type, make, model) %>%
+    mutate(n = n()) %>%
+    filter(n >= 1000) %>%
+    select(-n) %>%
+    ungroup()
+
+# Drop models not in top models
+ 
+dt <- merge(
+    dt, 
+    models %>% 
+        select(powertrain, vehicle_type, make, model) %>% 
+        mutate(keep = TRUE), 
+    by = c('powertrain', 'vehicle_type', 'make', 'model'), 
+    all.x = TRUE
+) %>% 
+    filter(!is.na(keep)) %>%
+    select(-keep)
 
 # Write to disc
 
