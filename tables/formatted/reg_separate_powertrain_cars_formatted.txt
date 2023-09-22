@@ -1,0 +1,54 @@
+\begin{table}
+\caption{Coefficients from linear models estimated on each separate powertrain with state and model year  fixed effects (cars only). Age is interacted with operating costs (in cents per mile), vehicle model, and electric driving range for BEVs and PHEVs. For conciseness, intercept terms are omitted and only vehicle model interactions with the highest and lowest estimated effects are included. Mileage is in units of 1,000 miles.}
+\vspace{-20pt}
+\begin{center}
+\begin{tabular}{p{2.4cm} D{.}{.}{1.1} D{.}{.}{1.1} D{.}{.}{1.1} D{.}{.}{1.1}}
+\toprule
+ \multicolumn{1}{r}{Powertrain:} & \multicolumn{1}{c}{Model 3a} & \multicolumn{1}{c}{Model 3b} & \multicolumn{1}{c}{Model 3c} & \multicolumn{1}{c}{Model 3d} \\
+  & \multicolumn{1}{c}{BEV} & \multicolumn{1}{c}{PHEV} & \multicolumn{1}{c}{Hybrid} & \multicolumn{1}{c}{Conventional} \\
+\midrule
+age\_years                            & 5.835^{***}  & 12.925^{***} & 14.028^{***}  & 11.448^{***}  \\
+                                      & (0.422)      & (0.398)      & (0.359)       & (0.032)       \\
+\midrule
+\multicolumn{5}{l}{\emph{Operating cost and range interactions with age\_years}} \\
+cents\_per\_mile           & -0.059^{**}  & 0.524^{***}  & -0.044        & -0.136^{***}  \\
+                                      & (0.020)      & (0.039)      & (0.028)       & (0.002)       \\
+range                      & 0.009^{***}  & -0.183^{***} &               &               \\
+                                      & (0.001)      & (0.011)      &               &               \\
+range*range\_low       & 0.055^{***}  &              &               &               \\
+($<$100mi)                                      & (0.010)      &              &               &               \\
+range*range\_mid       & 0.033^{***}  &              &               &               \\
+(100 - 200mi)                                      & (0.009)      &              &               &               \\
+\midrule
+\multicolumn{5}{l}{\emph{Select model interactions with age\_years}} \\
+\emph{Reference} & \multicolumn{1}{c}{\emph{Nissan}} & \multicolumn{1}{c}{\emph{Toyota}} & \multicolumn{1}{c}{\emph{Honda}} & \multicolumn{1}{c}{\emph{BMW}} \\
+\emph{level:} & \multicolumn{1}{c}{\emph{Leaf}} & \multicolumn{1}{c}{\emph{Prius Prime}} & \multicolumn{1}{c}{\emph{Accord}} & \multicolumn{1}{c}{\emph{3 Series}} \\
+bolt ev               & -5.672^{***} &              &               &               \\
+                                      & (0.293)      &              &               &               \\
+model 3               & 1.056^{***}  &              &               &               \\
+                                      & (0.292)      &              &               &               \\
+model s               & 0.538^{*}    &              &               &               \\
+                                      & (0.244)      &              &               &               \\
+i8                    &              & -9.208^{***} &               &               \\
+                                      &              & (0.337)      &               &               \\
+volt                  &              & 2.096^{***}  &               &               \\
+                                      &              & (0.288)      &               &               \\
+civic                 &              &              & 1.822^{***}   & 1.736^{***}   \\
+                                      &              &              & (0.395)       & (0.026)       \\
+fusion                &              &              & -6.255^{***}  & 2.136^{***}   \\
+                                      &              &              & (0.345)       & (0.027)       \\
+corolla               &              &              &               & 0.363^{***}   \\
+                                      &              &              &               & (0.028)       \\
+mustang               &              &              &               & -1.432^{***}  \\
+                                      &              &              &               & (0.031)       \\
+outback               &              &              &               & 3.168^{***}   \\
+                                      &              &              &               & (0.031)       \\
+\midrule
+Num. obs.                   & \multicolumn{1}{c}{175,773}        & \multicolumn{1}{c}{130,025}         & \multicolumn{1}{c}{562,747}         & \multicolumn{1}{c}{12,059,234}       \\
+R$^2$                 & 0.412        & 0.459        & 0.403         & 0.450         \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\end{center}
+\label{table:reg_separate_powertrain_cars}
+\end{table}

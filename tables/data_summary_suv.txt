@@ -6,28 +6,28 @@
 \midrule
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Number of Listings}}\\
-\hspace{1em}n & 11870521 & 43223 & 0 & 1765 & 10858\\
+\hspace{1em}n & 11333997 & 44190 & 0 & 1732 & 11511\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Number of Models}}\\
-\hspace{1em}models & 40 & 7 & 0 & 1 & 1\\
+\hspace{1em}models & 35 & 8 & 0 & 1 & 2\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Miles (1,000)}}\\
-\hspace{1em}mean & 51 & 46 &  & 12 & 34\\
+\hspace{1em}mean & 51 & 46 &  & 13 & 33\\
 \hspace{1em}sd & 31 & 28 &  & 9 & 18\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Age (years)}}\\
-\hspace{1em}mean & 4.2 & 4.1 &  & 2.7 & 3.9\\
+\hspace{1em}mean & 4.2 & 4.1 &  & 2.7 & 3.8\\
 \hspace{1em}sd & 1.6 & 1.6 &  & 0.4 & 1\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Price (\$USD)}}\\
-\hspace{1em}mean & 22217 & 28940 &  & 61973 & 72061\\
-\hspace{1em}sd & 8816 & 10317 &  & 6702 & 14405\\
+\hspace{1em}mean & 21413 & 29049 &  & 61779 & 71613\\
+\hspace{1em}sd & 7788 & 10248 &  & 6576 & 14135\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Electric Range (miles)}}\\
-\hspace{1em}mean &  &  &  & 204 & 262\\
-\hspace{1em}sd &  &  &  & 2 & 27\\
+\hspace{1em}mean &  &  &  & 204 & 266\\
+\hspace{1em}sd &  &  &  & 0 & 31\\
 \hspace{1em}min &  &  &  & 204 & 200\\
-\hspace{1em}max &  &  &  & 218 & 371\\
+\hspace{1em}max &  &  &  & 204 & 371\\
 \bottomrule
 \end{tabular}
 \end{table}

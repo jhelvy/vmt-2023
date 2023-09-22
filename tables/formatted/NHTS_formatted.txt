@@ -1,0 +1,35 @@
+\begin{table}[H]
+\begin{center}
+\caption{Coefficients from linear models estimated on the 2017 NHTS with state and model year fixed effects (cars only). Age is interacted with operating costs (in cents per mile), dummy coefficients for household size, and a dummy coefficient for whether the car is a ``secondary'' vehicle, defined as any vehicle with less than the highest odometer reading in a household in Models 6a and 6b, and any vehicle with less than the top two highest odometer readings in a household in Model 6c. For conciseness, intercept terms are omitted.}
+\begin{tabular}{l D{.}{.}{1.1} D{.}{.}{1.1} D{.}{.}{1.1}}
+\toprule
+
+ \multicolumn{1}{l}{Powertrain:} & \multicolumn{1}{c}{Model 6a} & \multicolumn{1}{c}{Model 6b} & \multicolumn{1}{c}{Model 6c}  \\
+  & \multicolumn{1}{c}{Conventional} & \multicolumn{1}{c}{Hybrid} & \multicolumn{1}{c}{Conventional} \\
+
+\midrule
+age\_years                                        & 12.839^{***} & 15.157^{***} & 12.332^{***} \\
+                                                  & (0.875)      & (3.964)      & (0.880)      \\
+\midrule
+\multicolumn{2}{l}{\emph{Interactions with age\_years}} \\
+cents\_per\_mile                  & -0.243^{***} & -0.378       & -0.239^{***} \\
+                                             & (0.040)      & (0.346)      & (0.040)      \\
+secondary vehicle & -1.063^{***} & -2.169^{*}   & -1.586^{***} \\
+                                             & (0.180)      & (0.849)      & (0.309)      \\
+HHSIZE 3                           & 1.419^{***}  & 1.096        & 1.501^{***}  \\
+                                             & (0.230)      & (1.035)      & (0.232)      \\
+HHSIZE 4                           & 1.541^{***}  & 1.356        & 1.627^{***}  \\
+                                             & (0.265)      & (1.195)      & (0.268)      \\
+HHSIZE 5                           & 2.644^{***}  & 2.019        & 2.676^{***}  \\
+                                             & (0.447)      & (2.248)      & (0.451)      \\
+HHSIZE 6+                          & 0.340        & 0.661        & 0.446        \\
+                                             & (0.703)      & (4.386)      & (0.711)      \\
+\midrule
+Num. obs.                                    & 32,169        & 2,139         & 32,169        \\
+R$^2$                            & 0.368        & 0.409        & 0.358        \\
+\bottomrule
+\multicolumn{3}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\label{table:nhts_reg_table}
+\end{center}
+\end{table}

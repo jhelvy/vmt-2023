@@ -8,35 +8,35 @@
 \toprule
  & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} \\
 \midrule
-(Intercept)                                     & 0.635^{***}  & 6.382^{***}   \\
-                                                & (0.018)      & (0.081)       \\
-age\_years                                      & 11.642^{***} & 11.878^{***}  \\
+(Intercept)                                     & 0.716^{***}  & 6.188^{***}   \\
+                                                & (0.019)      & (0.082)       \\
+age\_years                                      & 11.642^{***} & 11.909^{***}  \\
                                                 & (0.004)      & (0.015)       \\
-vehicle\_typesuv                                & -4.561^{***} & -18.575^{***} \\
-                                                & (0.026)      & (0.129)       \\
-vehicle\_typepickup                             & -4.604^{***} & -19.416^{***} \\
-                                                & (0.039)      & (0.244)       \\
-age\_years:vehicle\_typesuv                     & 1.304^{***}  & 1.679^{***}   \\
-                                                & (0.006)      & (0.027)       \\
-age\_years:vehicle\_typepickup                  & 2.078^{***}  & 5.683^{***}   \\
+vehicle\_typesuv                                & -4.819^{***} & -16.967^{***} \\
+                                                & (0.027)      & (0.133)       \\
+vehicle\_typepickup                             & -4.686^{***} & -19.223^{***} \\
+                                                & (0.039)      & (0.245)       \\
+age\_years:vehicle\_typesuv                     & 1.337^{***}  & 1.319^{***}   \\
+                                                & (0.006)      & (0.028)       \\
+age\_years:vehicle\_typepickup                  & 2.078^{***}  & 5.652^{***}   \\
                                                 & (0.009)      & (0.054)       \\
-cents\_per\_mile                                &              & -0.706^{***}  \\
+cents\_per\_mile                                &              & -0.679^{***}  \\
                                                 &              & (0.008)       \\
-age\_years:cents\_per\_mile                     &              & 0.005^{***}   \\
+age\_years:cents\_per\_mile                     &              & 0.002         \\
                                                 &              & (0.001)       \\
-vehicle\_typesuv:cents\_per\_mile               &              & 1.489^{***}   \\
+vehicle\_typesuv:cents\_per\_mile               &              & 1.333^{***}   \\
                                                 &              & (0.012)       \\
-vehicle\_typepickup:cents\_per\_mile            &              & 1.262^{***}   \\
+vehicle\_typepickup:cents\_per\_mile            &              & 1.235^{***}   \\
                                                 &              & (0.018)       \\
-age\_years:vehicle\_typesuv:cents\_per\_mile    &              & -0.073^{***}  \\
+age\_years:vehicle\_typesuv:cents\_per\_mile    &              & -0.041^{***}  \\
                                                 &              & (0.002)       \\
-age\_years:vehicle\_typepickup:cents\_per\_mile &              & -0.255^{***}  \\
+age\_years:vehicle\_typepickup:cents\_per\_mile &              & -0.252^{***}  \\
                                                 &              & (0.004)       \\
 \midrule
-Num. obs.                                       & 27627848     & 27627848      \\
-R$^2$ (full model)                              & 0.438        & 0.440         \\
+Num. obs.                                       & 26676056     & 26676056      \\
+R$^2$ (full model)                              & 0.439        & 0.441         \\
 R$^2$ (proj model)                              &              &               \\
-Adj. R$^2$ (full model)                         & 0.438        & 0.440         \\
+Adj. R$^2$ (full model)                         & 0.439        & 0.441         \\
 Adj. R$^2$ (proj model)                         &              &               \\
 \bottomrule
 \multicolumn{3}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}

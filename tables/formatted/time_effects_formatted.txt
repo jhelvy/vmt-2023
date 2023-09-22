@@ -1,0 +1,55 @@
+\begin{table}
+\caption{Coefficients from linear models estimated on BEV cars. Age is interacted with operating costs (in cents per mile), vehicle model, electric driving range, and vehicle model year fixed effects. For conciseness, intercept terms are omitted and only vehicle model interactions with the highest and lowest estimated effects are included. Mileage is in units of 1,000 miles.}
+\vspace{-20pt}
+\begin{center}
+\begin{tabular}{p{2.2cm} D{.}{.}{1.1} D{.}{.}{1.1} D{.}{.}{1.1} D{.}{.}{1.1}}
+\toprule
+ \multicolumn{1}{r}{Powertrain:} & \multicolumn{1}{c}{Model 5a} & \multicolumn{1}{c}{Model 5b} & \multicolumn{1}{c}{Model 5c} & \multicolumn{1}{c}{Model 5d} \\
+\midrule
+age\_years                      & 5.835^{***}  & 6.639^{***}  & 1.813^{**}    & 3.746^{***}   \\
+                                & (0.422)      & (0.449)      & (0.573)       & (0.632)       \\
+age\_years$^2$                  &              & -0.093^{***} &               & -0.156^{***}  \\
+                                &              & (0.018)      &               & (0.022)       \\
+\midrule
+\multicolumn{5}{l}{\emph{Operating cost and range interactions with age\_years}} \\
+cents\_per\_mile     & -0.059^{**}  & -0.058^{**}  & -0.033        & -0.033        \\
+                                & (0.020)      & (0.020)      & (0.022)       & (0.022)       \\
+range                & 0.009^{***}  & 0.007^{***}  & 0.016^{***}   & 0.016^{***}   \\
+                                & (0.001)      & (0.001)      & (0.002)       & (0.002)       \\
+range*range\_low & 0.055^{***}  & 0.034^{**}   & -0.031        & -0.038^{*}    \\
+($<$100mi)                                & (0.010)      & (0.011)      & (0.016)       & (0.016)       \\
+range*range\_mid & 0.033^{***}  & 0.032^{***}  & -0.016        & -0.014        \\
+(100-200mi)                                & (0.009)      & (0.009)      & (0.010)       & (0.010)       \\
+\midrule
+\multicolumn{5}{l}{\emph{Select model interactions with age\_years (reference level: Nissan Leaf)}} \\
+bolt ev         & -5.672^{***} & -5.495^{***} & -4.582^{***}  & -4.507^{***}  \\
+                                & (0.293)      & (0.295)      & (0.352)       & (0.352)       \\
+model 3         & 1.056^{***}  & 1.200^{***}  & 1.425^{***}   & 1.512^{***}   \\
+                                & (0.292)      & (0.293)      & (0.328)       & (0.328)       \\
+model s         & 0.538^{*}    & 0.968^{***}  & 1.240^{***}   & 1.340^{***}   \\
+                                & (0.244)      & (0.257)      & (0.327)       & (0.327)       \\
+\midrule
+\multicolumn{5}{l}{\emph{Model year interactions with age\_years (reference level: my2012)}} \\
+my2013               &              &              & 1.431^{***}   & 1.311^{***}   \\
+                                &              &              & (0.158)       & (0.159)       \\
+my2014               &              &              & 1.852^{***}   & 1.580^{***}   \\
+                                &              &              & (0.195)       & (0.199)       \\
+my2015               &              &              & 1.626^{***}   & 1.175^{***}   \\
+                                &              &              & (0.194)       & (0.204)       \\
+my2016               &              &              & 1.097^{***}   & 0.473^{*}     \\
+                                &              &              & (0.200)       & (0.218)       \\
+my2017               &              &              & 0.184         & -0.616^{*}    \\
+                                &              &              & (0.237)       & (0.261)       \\
+my2018               &              &              & 1.531^{***}   & 0.597         \\
+                                &              &              & (0.296)       & (0.323)       \\
+my2019               &              &              & 4.146^{***}   & 3.021^{***}   \\
+                                &              &              & (0.469)       & (0.494)       \\
+\midrule
+Num. obs.                   & \multicolumn{1}{c}{175,773}        & \multicolumn{1}{c}{175,773}         & \multicolumn{1}{c}{171,701}         & \multicolumn{1}{c}{171,701}       \\
+R$^2$               & 0.412        & 0.413        & 0.412         & 0.412         \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\end{center}
+\label{table:time_effects}
+\end{table}

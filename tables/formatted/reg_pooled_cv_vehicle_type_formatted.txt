@@ -1,0 +1,45 @@
+\begin{table}[H]
+\caption{Model coefficients from linear models of CV vehicle mileage versus age with vehicle type interactions (reference level is ``cars'').}
+\begin{center}
+\begin{tabular}{l D{.}{.}{2.6} D{.}{.}{2.6}}
+\toprule
+ & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} \\
+\midrule
+\multicolumn{2}{l}{\emph{Intercepts}} \\
+(Intercept)                                     & 0.635^{***}  & 6.382^{***}   \\
+                                                & (0.018)      & (0.081)       \\
+vehicle\_suv                                & -4.561^{***} & -18.575^{***} \\
+                                                & (0.026)      & (0.129)       \\
+vehicle\_pickup                             & -4.604^{***} & -19.416^{***} \\
+                                                & (0.039)      & (0.244)       \\
+cents\_per\_mile                                &              & -0.706^{***}  \\
+                                                &              & (0.008)       \\
+vehicle\_suv:cents\_per\_mile               &              & 1.489^{***}   \\
+                                                &              & (0.012)       \\
+vehicle\_pickup:cents\_per\_mile            &              & 1.262^{***}   \\
+                                                &              & (0.018)       \\
+\midrule
+age\_years                                      & 11.642^{***} & 11.878^{***}  \\
+                                                & (0.004)      & (0.015)       \\
+\midrule
+\multicolumn{2}{l}{\emph{Interactions with age\_years}} \\
+vehicle\_suv                     & 1.304^{***}  & 1.679^{***}   \\
+                                                & (0.006)      & (0.027)       \\
+vehicle\_pickup                  & 2.078^{***}  & 5.683^{***}   \\
+                                                & (0.009)      & (0.054)       \\
+cents\_per\_mile                     &              & 0.005^{***}   \\
+                                                &              & (0.001)       \\
+vehicle\_suv:cents\_per\_mile    &              & -0.073^{***}  \\
+                                                &              & (0.002)       \\
+vehicle\_pickup:cents\_per\_mile &              & -0.255^{***}  \\
+                                                &              & (0.004)       \\
+\midrule
+Num. obs.                                       & 27,627,848     & 27,627,848      \\
+R$^2$                               & 0.438        & 0.440         \\
+Adj. R$^2$                         & 0.438        & 0.440         \\
+\bottomrule
+\multicolumn{3}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\label{table:reg_pooled_cv_vehicle_type}
+\end{center}
+\end{table}

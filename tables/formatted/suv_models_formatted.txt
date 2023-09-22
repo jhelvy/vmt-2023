@@ -1,13 +1,14 @@
-
-\begin{longtable}[t]{llllrr}
-\caption{Counts of SUV model listings included in analysis.}\\
+\begin{longtable}[t]{p{1.5cm}p{1.5cm}p{1.5cm}p{2cm}p{1.5cm}p{1.5cm}}
+\caption{Counts of SUV model listings included in analyses.}\\
 \toprule
-powertrain & make & model & n & p & cumsum\\
+Powertrain & Make & Model & Count & Percent & Cumulative\\
+ &  &  &  &  & Percent\\
 \midrule
 \endfirsthead
-\caption[]{Counts of SUV model listings included in analysis. \textit{(continued)}}\\
+\caption[]{Counts of SUV model listings included in analyses. \textit{(cont.)}}\\
 \toprule
-powertrain & make & model & n & p & cumsum\\
+Powertrain & Make & Model & Count & Percent & Cumulative\\
+ &  &  &  &  & Percent\\
 \midrule
 \endhead
 
@@ -16,9 +17,7 @@ powertrain & make & model & n & p & cumsum\\
 \endlastfoot
  & Tesla & Model X & 16,246 & 0.194 & 0.194\\
 \nopagebreak
- & Audi & e-tron & 10,826 & 0.129 & 0.323\\
-\nopagebreak
-\multirow{-3}{*}{\raggedright\arraybackslash BEV} & Tesla & Model Y & 5,261 & 0.063 & 0.704\\
+\multirow{-2}{*}{\raggedright\arraybackslash BEV} & Audi & e-tron & 10,826 & 0.129 & 0.323\\
 \cmidrule{1-6}\pagebreak[0]
  & Toyota & RAV4 & 47,039 & 0.240 & 0.240\\
 \nopagebreak
@@ -32,9 +31,7 @@ powertrain & make & model & n & p & cumsum\\
 \nopagebreak
  & Subaru & XV Crosstrek & 6,005 & 0.031 & 0.832\\
 \nopagebreak
- & Porsche & Cayenne & 4,538 & 0.023 & 0.855\\
-\nopagebreak
-\multirow{-8}{*}{\raggedright\arraybackslash HYBRID} & Lexus & NX & 3,904 & 0.020 & 0.875\\
+\multirow{-7}{*}{\raggedright\arraybackslash HYBRID} & Porsche & Cayenne & 4,538 & 0.023 & 0.855\\
 \cmidrule{1-6}\pagebreak[0]
  & Honda & CR-V & 1,706,212 & 0.049 & 0.049\\
 \nopagebreak
@@ -104,5 +101,6 @@ powertrain & make & model & n & p & cumsum\\
 \nopagebreak
  & Ford & Expedition & 355,704 & 0.010 & 0.657\\
 \nopagebreak
-\multirow{-35}{*}{\raggedright\arraybackslash CONVENTIONAL} & Jeep & Wrangler & 350,373 & 0.010 & 0.667\\*
+\multirow{-35}{*}{\raggedright\arraybackslash CV} & Jeep & Wrangler & 350,373 & 0.010 & 0.667\\*
+\label{table:suv_models}
 \end{longtable}

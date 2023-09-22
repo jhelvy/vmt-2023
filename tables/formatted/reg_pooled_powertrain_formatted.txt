@@ -1,0 +1,46 @@
+\begin{table}[H]
+\caption{Model coefficients from linear models of vehicle mileage versus age with powertrain interactions. Mileage is in units of 1,000 miles.}
+\vspace{-20pt}
+\begin{center}
+\begin{tabular}{p{3cm} D{.}{.}{1.1} D{.}{.}{1.1} | D{.}{.}{1.1} D{.}{.}{1.1}}
+\toprule
+ & \multicolumn{2}{c}{Cars} & \multicolumn{2}{c}{SUVs} \\
+ & \multicolumn{1}{c}{Model 1a} & \multicolumn{1}{c}{Model 1b} & \multicolumn{1}{c}{Model 2a} & \multicolumn{1}{c}{Model 2b} \\
+\midrule
+\multicolumn{2}{l}{\emph{Intercepts}} \\
+(Intercept)                          & 0.635^{***}  & 0.635^{***}  & -3.926^{***} & -3.926^{***} \\
+                                     & (0.019)      & (0.019)      & (0.018)      & (0.018)      \\
+powertrain\_hybrid                     & -0.043       & -0.043       & 0.746^{*}    & 0.746^{*}    \\
+                                     & (0.093)      & (0.093)      & (0.297)      & (0.297)      \\
+powertrain\_phev                       & -3.962^{***} & -3.962^{***} &              &              \\
+                                     & (0.202)      & (0.202)      &              &              \\
+powertrain\_bev                        & -0.142       &              & -5.030^{***} &              \\
+                                     & (0.178)      &              & (0.761)      &              \\
+powertrain\_bev\_non\_tesla            &              & 0.965^{***}  &              & -6.279       \\
+                                     &              & (0.220)      &              & (3.573)      \\
+powertrain\_bev\_tesla                 &              & -1.210^{***} &              & 1.803^{*}    \\
+                                     &              & (0.299)      &              & (0.889)      \\
+\midrule
+age\_years                           & 11.642^{***} & 11.642^{***} & 12.945^{***} & 12.945^{***} \\
+                                     & (0.004)      & (0.004)      & (0.004)      & (0.004)      \\
+\midrule
+\multicolumn{2}{l}{\emph{Interactions with age\_years}} \\
+powertrain\_hybrid          & 0.299^{***}  & 0.299^{***}  & -0.853^{***} & -0.853^{***} \\
+                                     & (0.019)      & (0.019)      & (0.068)      & (0.068)      \\
+powertrain\_phev            & -0.529^{***} & -0.529^{***} &              &              \\
+                                     & (0.046)      & (0.046)      &              &              \\
+powertrain\_bev             & -4.492^{***} &              & -2.358^{***} &              \\
+                                     & (0.040)      &              & (0.196)      &              \\
+powertrain\_bev\_non\_tesla &              & -5.428^{***} &              & -4.482^{***} \\
+                                     &              & (0.050)      &              & (1.317)      \\
+powertrain\_bev\_tesla      &              & -2.856^{***} &              & -3.809^{***} \\
+                                     &              & (0.068)      &              & (0.220)      \\
+\midrule
+Num. obs.                       &     \multicolumn{1}{c}{12,927,779}        & \multicolumn{1}{c}{12,927,779}         & \multicolumn{1}{c}{11,926,367}         & \multicolumn{1}{c}{11,926,367}       \\
+R$^2$ & 0.406        & 0.406        & 0.477        & 0.477        \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+\end{tabular}
+\label{table:reg_pooled_powertrain_cars}
+\end{center}
+\end{table}
