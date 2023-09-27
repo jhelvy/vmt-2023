@@ -67,6 +67,81 @@ plot_theme <- function() {
     )
 }
 
+# Functions for cleaning raw data
+
+get_match <- function(ymmt, matches) {
+
+  # First do perfect join on model_trim
+  match_model_trim <- ymmt %>%
+    left_join(
+      matches %>%
+        rename(model_trim = model),
+      by = 'model_trim'
+    ) %>%
+    mutate(matching = "model_trim")
+
+  # If all matches are perfect, we're done!
+  if (!any(is.na(match_model_trim$key))) {
+    return(match_model_trim)
+  }
+
+  # Now for any missed matches, try match on just 'model'
+  match_model <- match_model_trim %>%
+    filter(is.na(key)) %>%
+    select(year, make, model, trim, powertrain, model_trim) %>%
+    left_join(matches, by = 'model') %>%
+    mutate(matching = "model")
+
+  # If all remaining matches are perfect, we're done!
+  if (!any(is.na(match_model$key))) {
+    result <- rbind(match_model_trim, match_model) %>%
+      filter(!is.na(key))
+    return(result)
+  }
+
+  # Now for any missed matches, try match on just 'trim'
+  match_trim <- match_model %>%
+    filter(is.na(key)) %>%
+    select(year, make, model, trim, powertrain, model_trim) %>%
+    left_join(
+      matches %>%
+        rename(trim = model),
+      by = 'trim'
+    ) %>%
+    mutate(matching = "trim")
+
+  # If all remaining matches are perfect, we're done!
+  if (!any(is.na(match_model$key))) {
+    result <- rbind(match_model_trim, match_model, match_trim) %>%
+      filter(!is.na(key))
+    return(result)
+  }
+
+  # Finally, for any remaining missed matches, try fuzzy join on 'model'
+  match_fuzzy <- stringdist_join(
+    x = match_trim %>%
+      filter(is.na(key)) %>%
+      select(year, make, model, trim, powertrain, model_trim),
+    y = matches,
+    by = 'model',
+    mode = 'left',
+    method = 'jw',
+    max_dist = 99,
+    distance_col = 'dist'
+  ) %>%
+    arrange(model.x, dist) %>%
+    filter(dist <= 0.3) %>% # Match threshold for similarity
+    select(-dist, -model.y) %>%
+    rename(model = model.x) %>%
+    group_by(year, make, model, trim) %>%
+    slice(1) %>%
+    mutate(matching = "fuzzy")
+  result <- rbind(
+    match_model_trim, match_model, match_trim, match_fuzzy) %>%
+    filter(!is.na(key))
+  return(result)
+}
+
 # Function to harmonize factor levels for powertrain
 
 set_powertrain_levels <- function(df) {
