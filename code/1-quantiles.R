@@ -207,7 +207,7 @@ plot <- quantiles_miles_full %>%
         y = 'Mileage (1,000)'
     )
 
-ggsave(here::here('figs', 'quantiles_miles.png'), plot, width = 9, height = 6)
+ggsave(here::here('figs', 'quantiles_miles_full.png'), plot, width = 9, height = 6)
 
 
 
@@ -255,57 +255,47 @@ write_csv(quantiles_dvmt, here::here('data', 'quantiles_dvmt.csv'))
 
 # Compare powertrains within vehicle type
 
+
 quantiles_dvmt %>% 
     filter(powertrain != 'all') %>% 
-    ggplot() + 
+    ggplot() +
     geom_line(aes(x = dvmt, y = quantile, color = powertrain)) + 
+    facet_wrap(vars(vehicle_type)) +
     geom_line(
-        data = quantiles_dvmt %>% 
-            filter(powertrain == 'all'), 
-        aes()
+        data = quantiles_dvmt_all %>% 
+            select(quantile, dvmt),
+        aes(x = dvmt, y = quantile)
     ) + 
-    facet_wrap(vars(vehicle_type)) + 
     plot_theme() + 
     theme(legend.position = 'right') + 
     labs(
+        title = "CDF of daily VMT", 
+        subtitle = "Black line is all vehicles aggregated, which is dominated by conventional vehicles",
         x = 'DVMT', 
         y = '%'
     )
 
-ggsave(here::here('figs', 'quantiles_dvmt_powertrain.png'), width = 10, height = 3.5)
+ggsave(here::here('figs', 'quantiles_dvmt_powertrain.png'), width = 10, height = 4)
 
 # Compare vehicle type within powertrain
 
 quantiles_dvmt %>% 
+    filter(powertrain != 'all') %>% 
     ggplot() + 
     geom_line(aes(x = dvmt, y = quantile, color = vehicle_type)) + 
     facet_wrap(vars(powertrain)) + 
+    geom_line(
+        data = quantiles_dvmt_all %>% 
+            select(quantile, dvmt),
+        aes(x = dvmt, y = quantile)
+    ) + 
     plot_theme() + 
     theme(legend.position = 'right') + 
     labs(
+        title = "CDF of daily VMT", 
+        subtitle = "Black line is all vehicles aggregated, which is dominated by conventional vehicles",
         x = 'DVMT', 
         y = '%'
     )
 
 ggsave(here::here('figs', 'quantiles_dvmt_vehicle_type.png'), width = 10, height = 6)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
