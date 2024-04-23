@@ -3,7 +3,9 @@ You can use this DOI to cite this repository:
 
 [![DOI](https://zenodo.org/badge/656871821.svg)](https://zenodo.org/badge/latestdoi/656871821)
 
-Replication materials for study comparing CV and PEV mileage
+Replication materials for study comparing CV and PEV mileage. Paper:
+
+> Zhao, L., Ottinger, E., Yip, A., & Helveston, J.P. (2023) “Quantifying electric vehicle mileage in the United States” _Joule_. 7, 1–15. DOI: [10.1016/j.joule.2023.09.015](https://doi.org/10.1016/j.joule.2023.09.015)
 
 All code to replicate results are in the "code" folder.
 
